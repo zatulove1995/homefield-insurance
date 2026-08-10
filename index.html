@@ -30,6 +30,21 @@
     .hm-window{ grid-template-columns:1fr; gap:28px; padding:32px 26px; }
     .hm-window__stat{ border-left:none; padding-left:0; border-top:1px solid var(--line); padding-top:26px; }
   }
+  .hm-cost{ border:1px solid var(--line); border-radius:var(--r-lg); background:var(--paper); overflow:hidden; box-shadow:var(--shadow-sm); }
+  .hm-cost__row{ display:grid; grid-template-columns:230px 1fr 130px; gap:26px; align-items:center; padding:22px 28px; border-bottom:1px solid var(--line); }
+  .hm-cost__row:last-child{ border-bottom:none; }
+  .hm-cost__who{ font-weight:600; }
+  .hm-cost__who span{ display:block; font-size:13px; color:var(--muted); font-weight:400; margin-top:2px; }
+  .hm-cost__bar{ height:10px; border-radius:99px; background:var(--paper-3); overflow:hidden; }
+  .hm-cost__bar i{ display:block; height:100%; border-radius:99px; background:var(--ink-3); }
+  .hm-cost__num{ text-align:right; font-family:var(--serif); font-size:24px; letter-spacing:-.02em; white-space:nowrap; }
+  .hm-cost__row--win{ background:var(--accent-soft); }
+  .hm-cost__row--win .hm-cost__bar i{ background:var(--accent); }
+  .hm-cost__row--win .hm-cost__num{ color:var(--accent-ink); }
+  @media(max-width:720px){
+    .hm-cost__row{ grid-template-columns:1fr auto; row-gap:12px; padding:18px 20px; }
+    .hm-cost__bar{ grid-column:1 / -1; }
+  }
 </style>
 </head>
 <body>
@@ -112,54 +127,31 @@
       <p class="eyebrow eyebrow--dark">The real math</p>
       <h2>What agencies actually pay to acquire one policy</h2>
       <p class="lede">
-        Nobody quotes you a cost per <em>acquisition</em> — they quote you a cost per postcard,
-        or per shared lead. Here's what the same acquired customer costs across the three ways
-        agencies buy growth today.
+        Cost per acquired policy, all-in — across the three ways agencies buy growth today.
       </p>
     </div>
 
-    <div class="cac">
-      <article class="cac__card">
-        <p class="cac__label">Direct mail</p>
-        <p class="cac__num">$250<span>–$750</span></p>
-        <p class="cac__unit">per acquired policy</p>
-        <ul class="cac__list">
-          <li>Print, postage &amp; list costs paid up front</li>
-          <li>2–4 weeks before you know anything</li>
-          <li>Typical response under 1%</li>
-          <li>No conversation — just a phone number, maybe</li>
-        </ul>
-      </article>
-
-      <article class="cac__card">
-        <p class="cac__label">Shared lead vendors</p>
-        <p class="cac__num">$180<span>–$400</span></p>
-        <p class="cac__unit">per acquired policy</p>
-        <ul class="cac__list">
-          <li>Same lead sold to 4–8 agents simultaneously</li>
-          <li>You're racing the dial, not selling</li>
-          <li>Form-fill intent, not a real reply</li>
-          <li>Monthly minimums and platform fees</li>
-        </ul>
-      </article>
-
-      <article class="cac__card cac__card--win">
-        <p class="cac__label">Homefield</p>
-        <p class="cac__num">$160<span>–$200</span></p>
-        <p class="cac__unit">per acquired policy</p>
-        <ul class="cac__list">
-          <li>$40 per lead at a 20–25% close rate</li>
-          <li>Yours alone — locked by ZIP code</li>
-          <li>They replied. In writing. Asking for a quote.</li>
-          <li>Pay per lead. Nothing else.</li>
-        </ul>
-        <p class="cac__foot">Roughly a third of a direct mail campaign, for a lead that already answered you.</p>
-      </article>
+    <div class="hm-cost">
+      <div class="hm-cost__row">
+        <div class="hm-cost__who">Direct mail<span>Postcards, printed and posted</span></div>
+        <div class="hm-cost__bar"><i style="width:100%"></i></div>
+        <div class="hm-cost__num">$250–$750</div>
+      </div>
+      <div class="hm-cost__row">
+        <div class="hm-cost__who">Shared lead vendors<span>Same lead sold to 4–8 agents</span></div>
+        <div class="hm-cost__bar"><i style="width:53%"></i></div>
+        <div class="hm-cost__num">$180–$400</div>
+      </div>
+      <div class="hm-cost__row hm-cost__row--win">
+        <div class="hm-cost__who">Homefield<span>They replied asking for a quote</span></div>
+        <div class="hm-cost__bar"><i style="width:27%"></i></div>
+        <div class="hm-cost__num">$160–$200</div>
+      </div>
     </div>
 
     <p class="fineprint">
-      Direct mail and shared-lead ranges reflect commonly cited industry figures for P&amp;C personal lines.
-      Homefield's figure assumes $40/lead at the close rates our agencies report — your results depend on your follow-up.
+      Homefield's figure assumes $40/lead at the 20–25% close rates our agencies report; other
+      ranges reflect commonly cited industry figures for P&amp;C personal lines.
       <a class="hm-link" href="compare.html">See the full comparison →</a>
     </p>
   </div>
