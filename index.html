@@ -18,18 +18,6 @@
   .hm-link{ font-weight:600; color:var(--accent); white-space:nowrap; }
   .hm-link:hover{ color:var(--accent-ink); }
   .hm-more{ margin-top:44px; text-align:center; font-size:16px; }
-  .hm-window{ display:grid; grid-template-columns:1.4fr 1fr; gap:48px; align-items:center;
-    background:var(--accent-soft); border:1px solid var(--line); border-radius:var(--r-lg); padding:44px 48px; }
-  .hm-window h2{ font-family:var(--serif); font-weight:400; font-size:clamp(26px,3.4vw,38px); letter-spacing:-.02em; margin:10px 0 12px; }
-  .hm-window__lede{ color:var(--muted); margin:0 0 24px; max-width:54ch; }
-  .hm-window__stat{ text-align:center; border-left:1px solid var(--line); padding-left:44px; }
-  .hm-window__num{ font-family:var(--serif); font-size:clamp(48px,6vw,64px); letter-spacing:-.02em; color:var(--accent-ink); line-height:1; }
-  .hm-window__cap{ font-size:13.5px; color:var(--muted); margin-top:10px; line-height:1.5; }
-  .hm-window__cap span{ display:block; font-size:12px; opacity:.75; margin-top:6px; }
-  @media(max-width:860px){
-    .hm-window{ grid-template-columns:1fr; gap:28px; padding:32px 26px; }
-    .hm-window__stat{ border-left:none; padding-left:0; border-top:1px solid var(--line); padding-top:26px; }
-  }
   .hm-mail{ max-width:640px; margin:0 auto; background:var(--paper); border:1px solid var(--line); border-radius:var(--r-lg); box-shadow:var(--shadow-sm); overflow:hidden; }
   .hm-mail__bar{ display:flex; align-items:center; gap:6px; padding:12px 18px; background:var(--paper-2); border-bottom:1px solid var(--line); }
   .hm-mail__tag{ margin-left:auto; font-family:var(--mono); font-size:10.5px; letter-spacing:.06em; text-transform:uppercase; color:var(--muted); }
@@ -128,7 +116,7 @@
     </p>
     <div class="hero__actions reveal">
       <a class="btn btn--primary btn--lg" href="contact.html">Book a call</a>
-      <a class="btn btn--quiet btn--lg" href="contact.html">Get your free Window Report →</a>
+      <a class="btn btn--quiet btn--lg" href="how-it-works.html">How it works →</a>
     </div>
     <p class="hero__note reveal">From <strong>$40 per qualified lead</strong> · No platform fees · No contract</p>
 
@@ -400,30 +388,6 @@
     </div>
 
     <p class="hm-more"><a class="hm-link" href="faq.html">All questions →</a></p>
-  </div>
-</section>
-
-<!-- ── WINDOW REPORT ─────────────────────────────────── -->
-<section class="section">
-  <div class="wrap">
-    <div class="hm-window">
-      <div>
-        <p class="eyebrow eyebrow--dark">Free · No call required</p>
-        <h2>Get your Window Report</h2>
-        <p class="hm-window__lede">
-          Tell us your ZIP codes. We'll send back how many homeowners enter their renewal
-          window there every month, how that volume moves across the year, and what it's
-          worth at your close rate. Yours to keep, whether or not you ever buy a lead.
-        </p>
-        <a class="btn btn--dark" href="contact.html">Get my Window Report</a>
-      </div>
-      <div class="hm-window__stat">
-        <p class="hm-window__num">1,204</p>
-        <p class="hm-window__cap">homeowners enter their renewal window each month in a typical 300-ZIP territory
-          <span>Sample figure — yours is calculated from your actual ZIPs</span>
-        </p>
-      </div>
-    </div>
   </div>
 </section>
 
