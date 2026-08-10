@@ -31,19 +31,27 @@
     .hm-window__stat{ border-left:none; padding-left:0; border-top:1px solid var(--line); padding-top:26px; }
   }
   .hm-cost{ border:1px solid var(--line); border-radius:var(--r-lg); background:var(--paper); overflow:hidden; box-shadow:var(--shadow-sm); }
-  .hm-cost__row{ display:grid; grid-template-columns:230px 1fr 130px; gap:26px; align-items:center; padding:22px 28px; border-bottom:1px solid var(--line); }
+  .hm-cost__head{ display:flex; justify-content:space-between; align-items:center; gap:16px; padding:13px 28px; background:var(--paper-2); border-bottom:1px solid var(--line); }
+  .hm-cost__title{ font-family:var(--mono); font-size:11.5px; letter-spacing:.1em; text-transform:uppercase; font-weight:500; }
+  .hm-cost__stamp{ font-family:var(--mono); font-size:11.5px; letter-spacing:.04em; color:var(--muted); }
+  .hm-cost__row{ display:grid; grid-template-columns:215px 1fr 110px 122px; gap:22px; align-items:center; padding:20px 28px; border-bottom:1px solid var(--line); }
   .hm-cost__row:last-child{ border-bottom:none; }
-  .hm-cost__who{ font-weight:600; }
+  .hm-cost__who{ font-weight:600; font-size:15px; }
   .hm-cost__who span{ display:block; font-size:13px; color:var(--muted); font-weight:400; margin-top:2px; }
-  .hm-cost__bar{ height:10px; border-radius:99px; background:var(--paper-3); overflow:hidden; }
+  .hm-cost__bar{ height:8px; border-radius:99px; background:var(--paper-3); overflow:hidden; }
   .hm-cost__bar i{ display:block; height:100%; border-radius:99px; background:var(--ink-3); }
-  .hm-cost__num{ text-align:right; font-family:var(--serif); font-size:24px; letter-spacing:-.02em; white-space:nowrap; }
+  .hm-cost__num{ text-align:right; font-family:var(--mono); font-size:13.5px; font-weight:500; white-space:nowrap; }
+  .hm-cost__x{ justify-self:end; font-family:var(--mono); font-size:10.5px; letter-spacing:.03em; white-space:nowrap;
+    color:var(--muted); background:var(--paper-3); padding:4px 10px; border-radius:99px; }
+  .hm-cost__x--win{ color:var(--accent-ink); background:#fff; border:1px solid var(--accent); font-weight:500; }
   .hm-cost__row--win{ background:var(--accent-soft); }
   .hm-cost__row--win .hm-cost__bar i{ background:var(--accent); }
-  .hm-cost__row--win .hm-cost__num{ color:var(--accent-ink); }
-  @media(max-width:720px){
-    .hm-cost__row{ grid-template-columns:1fr auto; row-gap:12px; padding:18px 20px; }
-    .hm-cost__bar{ grid-column:1 / -1; }
+  .hm-cost__row--win .hm-cost__num{ color:var(--accent-ink); font-weight:700; }
+  @media(max-width:820px){
+    .hm-cost__row{ grid-template-columns:1fr auto auto; row-gap:12px; padding:16px 20px; }
+    .hm-cost__bar{ grid-column:1 / -1; grid-row:2; }
+    .hm-cost__head{ padding:11px 20px; }
+    .hm-cost__stamp{ display:none; }
   }
 </style>
 </head>
@@ -132,20 +140,27 @@
     </div>
 
     <div class="hm-cost">
+      <div class="hm-cost__head">
+        <span class="hm-cost__title">Cost per acquired policy</span>
+        <span class="hm-cost__stamp">All-in · P&amp;C personal lines</span>
+      </div>
       <div class="hm-cost__row">
         <div class="hm-cost__who">Direct mail<span>Postcards, printed and posted</span></div>
         <div class="hm-cost__bar"><i style="width:100%"></i></div>
-        <div class="hm-cost__num">$250–$750</div>
+        <span class="hm-cost__num">$250–$750</span>
+        <span class="hm-cost__x">up to 3.8× more</span>
       </div>
       <div class="hm-cost__row">
         <div class="hm-cost__who">Shared lead vendors<span>Same lead sold to 4–8 agents</span></div>
         <div class="hm-cost__bar"><i style="width:53%"></i></div>
-        <div class="hm-cost__num">$180–$400</div>
+        <span class="hm-cost__num">$180–$400</span>
+        <span class="hm-cost__x">up to 2× more</span>
       </div>
       <div class="hm-cost__row hm-cost__row--win">
         <div class="hm-cost__who">Homefield<span>They replied asking for a quote</span></div>
         <div class="hm-cost__bar"><i style="width:27%"></i></div>
-        <div class="hm-cost__num">$160–$200</div>
+        <span class="hm-cost__num">$160–$200</span>
+        <span class="hm-cost__x hm-cost__x--win">your cost</span>
       </div>
     </div>
 
