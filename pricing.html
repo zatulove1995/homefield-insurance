@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Pricing — Homefield</title>
+<meta name="description" content="Per-lead pricing for exclusive homeowner insurance leads: $40, $35, or $30 per qualified reply. No platform fee, no setup fee, no annual contract, no minimum after onboarding.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css?v=nb2">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='16' fill='%230A0D14'/%3E%3Cpath d='M9 9h14v8.5L16 25l-7-7.5z' fill='%232E5BFF'/%3E%3C/svg%3E">
+<script>document.documentElement.className += ' js';</script>
+<style>
+/* ── pricing-page components (pr-) ─────────────────── */
+
+.pr-math{ display:grid; grid-template-columns:1fr 1fr; gap:20px; align-items:stretch; }
+
+.pr-math__card{
+  background:var(--paper); border:1px solid var(--line); border-radius:var(--r-lg);
+  padding:26px 26px 22px; display:flex; flex-direction:column; box-shadow:var(--shadow);
+}
+.pr-math__card--nb{ background:var(--ink); border-color:var(--ink); color:#fff; box-shadow:var(--shadow-lg); }
+
+.pr-math__title{
+  font-family:var(--mono); font-size:11.5px; letter-spacing:.1em; text-transform:uppercase;
+  color:var(--muted); margin-bottom:14px;
+}
+.pr-math__card--nb .pr-math__title{ color:#8FA8FF; }
+
+.pr-math__rows{ margin:0; }
+.pr-math__row{
+  display:flex; justify-content:space-between; align-items:baseline; gap:18px;
+  padding:11px 0; border-top:1px solid var(--line); font-size:14.5px;
+}
+.pr-math__card--nb .pr-math__row{ border-top-color:var(--line-dark); }
+.pr-math__row dt{ color:var(--muted); line-height:1.45; }
+.pr-math__card--nb .pr-math__row dt{ color:var(--muted-dark); }
+.pr-math__row dd{
+  margin:0; font-family:var(--mono); font-size:13.5px; font-weight:500;
+  white-space:nowrap; text-align:right;
+}
+
+.pr-math__row--total{ padding:16px 0 2px; }
+.pr-math__row--total dt{ font-weight:600; color:var(--ink); }
+.pr-math__card--nb .pr-math__row--total dt{ color:#fff; }
+.pr-math__row--total dd{ font-family:var(--serif); font-weight:400; font-size:32px; letter-spacing:-.02em; line-height:1; }
+.pr-math__card--nb .pr-math__row--total dd{ color:#B9C6FF; }
+
+.pr-math__foot{
+  margin-top:auto; padding-top:18px; font-size:13px; line-height:1.55; color:var(--muted);
+}
+.pr-math__card--nb .pr-math__foot{ color:var(--muted-dark); }
+
+/* "Every tier includes" — targeting grid standing alone, not under steps */
+.pr-includes{ margin-top:0; padding-top:0; border-top:0; }
+
+/* Onboarding — four steps instead of three, cards keep ink text on the dark section */
+.pr-steps4{ grid-template-columns:repeat(4,1fr); }
+.pr-steps4 .step{ color:var(--ink); }
+
+.pr-note{ margin-top:48px; text-align:center; font-size:14.5px; color:var(--muted-dark); }
+
+@media (max-width:960px){
+  .pr-steps4{ grid-template-columns:1fr 1fr; }
+}
+@media (max-width:760px){
+  .pr-math{ grid-template-columns:1fr; }
+}
+@media (max-width:640px){
+  .pr-steps4{ grid-template-columns:1fr; }
+}
+</style>
+</head>
+<body>
+
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="nav" id="nav">
+  <div class="wrap nav__inner">
+    <a class="brand" href="index.html" aria-label="Homefield home">
+      <svg class="brand__mark" viewBox="0 0 32 32" aria-hidden="true">
+        <circle cx="16" cy="16" r="15" fill="none" stroke="currentColor" stroke-width="1.5" opacity=".35"/>
+        <path d="M9 8 H23 V17 L16 24 L9 17 Z" fill="currentColor"/>
+        <path d="M16 8 H23 V17 L16 24 Z" fill="currentColor" opacity=".45"/>
+      </svg>
+      <span class="brand__word">Homefield</span>
+    </a>
+
+    <nav class="nav__links" aria-label="Primary">
+      <a href="how-it-works.html">How it works</a>
+      <a href="leads.html">The leads</a>
+      <a href="territory.html">Territory</a>
+      <a href="compare.html">Compare</a>
+      <a href="pricing.html">Pricing</a>
+      <a href="faq.html">FAQ</a>
+    </nav>
+
+    <div class="nav__cta">
+      <a class="btn btn--ghost btn--sm" href="contact.html">Book a call</a>
+    </div>
+
+    <button class="nav__toggle" id="navToggle" aria-expanded="false" aria-controls="mobileNav" aria-label="Open menu">
+      <span></span><span></span>
+    </button>
+  </div>
+  <div class="mobilenav" id="mobileNav" hidden>
+    <a href="how-it-works.html">How it works</a>
+    <a href="leads.html">The leads</a>
+    <a href="territory.html">Territory</a>
+    <a href="compare.html">Compare</a>
+    <a href="pricing.html">Pricing</a>
+    <a href="faq.html">FAQ</a>
+    <a class="btn btn--primary" href="contact.html">Book a call</a>
+  </div>
+</header>
+
+<main id="main">
+
+<!-- ── HERO ──────────────────────────────────────────── -->
+<section class="hero hero--page">
+  <div class="hero__glow" aria-hidden="true"></div>
+  <div class="wrap hero__inner">
+    <p class="eyebrow reveal">Pricing</p>
+    <h1 class="hero__h1 reveal">You pay for replies.<br><em>Nothing else.</em></h1>
+    <p class="hero__sub reveal">
+      $40, $35, or $30 per qualified lead — and that's the whole invoice.
+      No platform fee, no setup fee, no annual contract, no minimum after onboarding.
+    </p>
+  </div>
+</section>
+
+<!-- ── TIERS ─────────────────────────────────────────── -->
+<section class="section">
+  <div class="wrap">
+    <div class="sechead sechead--center">
+      <p class="eyebrow eyebrow--dark">Per qualified lead</p>
+      <h2>Three rates. One variable: volume.</h2>
+      <p class="lede">The lead itself is identical at every tier — same data, same sequence, same exclusivity. What changes is the rate, the ZIP capacity, and the service around it.</p>
+    </div>
+
+    <div class="tiers">
+      <article class="tier">
+        <p class="tier__name">Starter</p>
+        <p class="tier__price">$40<span>/lead</span></p>
+        <p class="tier__vol">Up to 50 qualified leads / month</p>
+        <ul class="tier__list">
+          <li>Up to 150 ZIP codes</li>
+          <li>3-email sequence, your branding</li>
+          <li>Slack + email delivery</li>
+          <li>Email support</li>
+        </ul>
+        <a class="btn btn--outline btn--full" href="contact.html">Book a call</a>
+      </article>
+
+      <article class="tier tier--feature">
+        <p class="tier__flag">Most agencies start here</p>
+        <p class="tier__name">Growth</p>
+        <p class="tier__price">$35<span>/lead</span></p>
+        <p class="tier__vol">51–299 qualified leads / month</p>
+        <ul class="tier__list">
+          <li>Up to 350 ZIP codes</li>
+          <li>Everything in Starter</li>
+          <li>CRM webhook integration</li>
+          <li>Dedicated success manager</li>
+          <li>Monthly performance review</li>
+        </ul>
+        <a class="btn btn--primary btn--full" href="contact.html">Book a call</a>
+      </article>
+
+      <article class="tier">
+        <p class="tier__name">Scale</p>
+        <p class="tier__price">$30<span>/lead</span></p>
+        <p class="tier__vol">300+ qualified leads / month</p>
+        <ul class="tier__list">
+          <li>Up to 500 ZIP codes</li>
+          <li>Everything in Growth</li>
+          <li>Multi-office lead routing</li>
+          <li>Custom sequence copywriting</li>
+          <li>Priority support, same-day</li>
+        </ul>
+        <a class="btn btn--outline btn--full" href="contact.html">Book a call</a>
+      </article>
+    </div>
+
+    <p class="fineprint fineprint--center">
+      A qualified lead is a homeowner in your territory who replies expressing interest — asking for
+      a quote, asking what you'd charge, asking to be called. Bounces, auto-replies, unsubscribes,
+      wrong contacts, and hostile replies are never billed.
+    </p>
+  </div>
+</section>
+
+<!-- ── THE MATH, WORKED ──────────────────────────────── -->
+<section class="section section--paper">
+  <div class="wrap">
+    <div class="sechead">
+      <p class="eyebrow eyebrow--dark">The math, worked</p>
+      <h2>What 100 leads a month actually buys</h2>
+      <p class="lede">
+        A per-lead price is noise until it becomes a cost per policy. Here's the Growth tier
+        worked end to end — next to the same money spent on postcards.
+      </p>
+    </div>
+
+    <!-- Illustrative worked example — same assumptions as the acquisition-cost comparison -->
+    <div class="pr-math">
+      <article class="pr-math__card pr-math__card--nb">
+        <p class="pr-math__title">Homefield — Growth tier</p>
+        <dl class="pr-math__rows">
+          <div class="pr-math__row"><dt>Qualified leads</dt><dd>100 / mo</dd></div>
+          <div class="pr-math__row"><dt>Growth rate</dt><dd>$35 / lead</dd></div>
+          <div class="pr-math__row"><dt>Monthly spend</dt><dd>$3,500</dd></div>
+          <div class="pr-math__row"><dt>Close rate — within the range agencies report</dt><dd>21%</dd></div>
+          <div class="pr-math__row"><dt>Policies written</dt><dd>21</dd></div>
+          <div class="pr-math__row pr-math__row--total"><dt>Cost per acquired policy</dt><dd>$167</dd></div>
+        </dl>
+        <p class="pr-math__foot">All 100 replied in writing about their renewal. The 79 who didn't close this month are still yours to follow up — forever.</p>
+      </article>
+
+      <article class="pr-math__card">
+        <p class="pr-math__title">The same $3,500 — direct mail</p>
+        <dl class="pr-math__rows">
+          <div class="pr-math__row"><dt>Budget</dt><dd>$3,500</dd></div>
+          <div class="pr-math__row"><dt>Postcards it buys, all-in</dt><dd>~6,300</dd></div>
+          <div class="pr-math__row"><dt>Typical response</dt><dd>Under 1%</dd></div>
+          <div class="pr-math__row"><dt>What a response contains</dt><dd>A number, maybe</dd></div>
+          <div class="pr-math__row"><dt>Time before you learn anything</dt><dd>~3 weeks</dd></div>
+          <div class="pr-math__row pr-math__row--total"><dt>Cost per acquired policy</dt><dd>$250–$750</dd></div>
+        </dl>
+        <p class="pr-math__foot">No reply thread, no verified email, no record — and anyone can mail the same street next week.</p>
+      </article>
+    </div>
+
+    <p class="fineprint">
+      Consistent with the $160–$200 per-policy range we quote elsewhere: $35–40 per lead at the
+      20–25% close rates our agencies report. The biggest variable is
+      follow-up speed — these are homeowners who just asked for a quote, and close rates track how
+      fast they get one. Direct-mail figures reflect commonly cited industry ranges for P&amp;C personal lines.
+    </p>
+  </div>
+</section>
+
+<!-- ── EVERY TIER INCLUDES ───────────────────────────── -->
+<section class="section">
+  <div class="wrap">
+    <div class="sechead sechead--center">
+      <p class="eyebrow eyebrow--dark">Every tier includes</p>
+      <h2>The tiers change the rate. Not the machine.</h2>
+    </div>
+
+    <div class="targeting pr-includes">
+      <div class="targeting__col">
+        <h4>The data</h4>
+        <p>275M+ homeowner records, cut five ways — ZIP, home value, renewal window, ownership length, income band. Every tier draws from the same file.</p>
+      </div>
+      <div class="targeting__col">
+        <h4>The sending</h4>
+        <p>Warmed domains that carry your agency's name — never your real domain. A personal, plain-text three-email sequence over 14 days.</p>
+      </div>
+      <div class="targeting__col">
+        <h4>The classification</h4>
+        <p>Every reply read and graded. Bounces, auto-replies, opt-outs, and "no thanks" are disqualified — and a disqualified reply never reaches your bill.</p>
+      </div>
+      <div class="targeting__col">
+        <h4>The compliance</h4>
+        <p>CAN-SPAM throughout: real sender identity, physical mailing address, one-click unsubscribe honored instantly, suppression maintained, state rules respected.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── ONBOARDING ────────────────────────────────────── -->
+<section class="section section--dark">
+  <div class="wrap">
+    <div class="sechead sechead--center sechead--onDark">
+      <p class="eyebrow">Onboarding</p>
+      <h2>One onboarding. Then it just bills per reply.</h2>
+      <p class="lede">Four things happen once, and none of them happen again.</p>
+    </div>
+
+    <ol class="steps pr-steps4">
+      <li class="step">
+        <p class="step__n">01</p>
+        <h3>Territory pulled &amp; locked</h3>
+        <p>We pull your ZIPs live, confirm they're open, and lock them to your agency on signature.</p>
+      </li>
+      <li class="step">
+        <p class="step__n">02</p>
+        <h3>Branding &amp; sender identity</h3>
+        <p>Warmed sending domains are set up carrying your agency's name. Your real domain is never touched.</p>
+      </li>
+      <li class="step">
+        <p class="step__n">03</p>
+        <h3>Targeting cut</h3>
+        <p>Your list is filtered from 275M+ homeowner records by ZIP, home value, renewal window, ownership length, and income band.</p>
+      </li>
+      <li class="step">
+        <p class="step__n">04</p>
+        <h3>Sequence approved by you</h3>
+        <p>Three emails, written to sound like your agency. Nothing sends until you've signed off.</p>
+      </li>
+    </ol>
+
+    <p class="pr-note">About two weeks to warm the sending infrastructure and build the list. First leads around day 21. Continuous after that.</p>
+  </div>
+</section>
+
+<!-- ── PRICING FAQ ───────────────────────────────────── -->
+<section class="section section--paper">
+  <div class="wrap wrap--narrow">
+    <div class="sechead sechead--center">
+      <p class="eyebrow eyebrow--dark">Pricing FAQ</p>
+      <h2>The billing questions, answered</h2>
+    </div>
+
+    <div class="faq">
+      <details class="faq__item">
+        <summary>When am I actually billed?</summary>
+        <div class="faq__a"><p>Monthly, in arrears. Each invoice covers the prior month's qualified leads, itemized — every line is a reply you can open and read.</p></div>
+      </details>
+      <details class="faq__item">
+        <summary>What if I think a lead was graded wrong?</summary>
+        <div class="faq__a"><p>Flag it. We review the full thread, and obvious misgrades are credited — no argument. The definition is narrow on purpose: if a reasonable person wouldn't read the reply as interest, you shouldn't pay for it.</p></div>
+      </details>
+      <details class="faq__item">
+        <summary>Can I pause?</summary>
+        <div class="faq__a"><p>Yes, anytime. Your territory holds for 30 days while you're paused; after that it releases and goes back to first come, first served.</p></div>
+      </details>
+      <details class="faq__item">
+        <summary>Do prices drop as volume grows?</summary>
+        <div class="faq__a"><p>Yes — that's what the tiers are. $40 per lead up to 50 a month, $35 from 51, $30 from 300.</p></div>
+      </details>
+      <details class="faq__item">
+        <summary>Is there a cap on what I can spend?</summary>
+        <div class="faq__a"><p>If you want one. Set a monthly cap anytime and we pace the sending to it — you'll never get a surprise invoice because the outreach performed better than expected.</p></div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- ── CTA ───────────────────────────────────────────── -->
+<section class="section section--cta">
+  <div class="wrap">
+    <div class="ctaband">
+      <h2>Let's see if your ZIPs are open.</h2>
+      <p>Fifteen minutes. We'll pull your territory live on the call, show you real replies from agencies your size, and tell you honestly if this beats what you're already running.</p>
+      <div class="ctaband__actions">
+        <a class="btn btn--primary btn--lg" href="contact.html">Book a call</a>
+        <a class="btn btn--quiet btn--lg" href="compare.html">See the comparison →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="foot">
+  <div class="wrap foot__inner">
+    <div class="foot__brand">
+      <a class="brand brand--foot" href="index.html">
+        <svg class="brand__mark" viewBox="0 0 32 32" aria-hidden="true">
+          <circle cx="16" cy="16" r="15" fill="none" stroke="currentColor" stroke-width="1.5" opacity=".35"/>
+          <path d="M9 8 H23 V17 L16 24 L9 17 Z" fill="currentColor"/>
+          <path d="M16 8 H23 V17 L16 24 Z" fill="currentColor" opacity=".45"/>
+        </svg>
+        <span class="brand__word">Homefield</span>
+      </a>
+      <p>Exclusive homeowner insurance leads for independent agencies.</p>
+    </div>
+    <nav class="foot__links" aria-label="Footer">
+      <div>
+        <h5>Product</h5>
+        <a href="how-it-works.html">How it works</a>
+        <a href="leads.html">The leads</a>
+        <a href="territory.html">Territory</a>
+        <a href="compare.html">Compare</a>
+      </div>
+      <div>
+        <h5>Company</h5>
+        <a href="pricing.html">Pricing</a>
+        <a href="faq.html">FAQ</a>
+        <a href="contact.html">Book a call</a>
+      </div>
+      <div>
+        <h5>Legal</h5>
+        <a href="privacy.html">Privacy</a>
+        <a href="terms.html">Terms</a>
+      </div>
+    </nav>
+  </div>
+  <div class="wrap foot__bar">
+    <p>&copy; <span id="yr">2026</span> Homefield. All rights reserved.</p>
+    <p>Mailing address goes here · CAN-SPAM compliant sending</p>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

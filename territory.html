@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Territory — Homefield</title>
+<meta name="description" content="One agency per ZIP, first come first served. How Homefield territories get claimed, held, released, and expanded — and which metros are open right now.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css?v=nb2">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='16' fill='%230A0D14'/%3E%3Cpath d='M9 9h14v8.5L16 25l-7-7.5z' fill='%232E5BFF'/%3E%3C/svg%3E">
+<script>document.documentElement.className += ' js';</script>
+<style>
+/* ── tr-: territory availability board ─────────────────── */
+.tr-board{
+  background:color-mix(in srgb, var(--paper) 4%, transparent);
+  border:1px solid var(--line-dark);
+  border-radius:var(--r-lg);
+  overflow:hidden;
+  box-shadow:var(--shadow-lg);
+}
+.tr-board__head{
+  display:flex; align-items:center; justify-content:space-between; gap:16px;
+  padding:16px 24px; border-bottom:1px solid var(--line-dark);
+}
+.tr-board__title{
+  font-family:var(--mono); font-size:11.5px; letter-spacing:.1em; text-transform:uppercase;
+  color:color-mix(in srgb, var(--accent) 48%, var(--paper));
+}
+.tr-board__stamp{ font-family:var(--mono); font-size:11.5px; letter-spacing:.04em; color:var(--muted-dark); }
+.tr-tablewrap{ overflow-x:auto; -webkit-overflow-scrolling:touch; }
+.tr-table{ width:100%; min-width:520px; border-collapse:collapse; font-size:15px; }
+.tr-table th, .tr-table td{ padding:16px 24px; text-align:left; vertical-align:middle; }
+.tr-table thead th{
+  font-size:11.5px; letter-spacing:.1em; text-transform:uppercase; font-weight:600;
+  color:var(--muted-dark); border-bottom:1px solid var(--line-dark); white-space:nowrap;
+  padding-top:14px; padding-bottom:14px;
+}
+.tr-table tbody tr{ border-bottom:1px solid color-mix(in srgb, var(--paper) 7%, transparent); }
+.tr-table tbody tr:last-child{ border-bottom:0; }
+.tr-metro{ font-weight:500; color:var(--paper); }
+.tr-state{ color:var(--muted-dark); font-size:14px; white-space:nowrap; }
+.tr-status{ text-align:right; }
+.tr-pill{
+  display:inline-block; font-size:12px; font-weight:600; letter-spacing:.02em;
+  padding:4px 12px; border-radius:999px; white-space:nowrap;
+}
+.tr-pill--open{ background:color-mix(in srgb, var(--teal) 16%, transparent); color:var(--teal); }
+.tr-pill--claimed{ background:color-mix(in srgb, var(--paper) 8%, transparent); color:var(--muted-dark); }
+.tr-pill--wait{
+  background:color-mix(in srgb, var(--accent) 24%, transparent);
+  color:color-mix(in srgb, var(--accent) 42%, var(--paper));
+}
+.tr-pill--check{ background:var(--accent); color:var(--paper); transition:background .15s ease; }
+.tr-pill--check:hover{ background:var(--accent-ink); }
+.tr-row--you{ background:color-mix(in srgb, var(--accent) 9%, transparent); }
+.tr-board__foot{
+  padding:14px 24px 18px; font-size:13px; line-height:1.6;
+  color:var(--muted-dark); border-top:1px solid var(--line-dark);
+}
+@media (max-width:640px){
+  .tr-table th, .tr-table td{ padding:13px 16px; }
+  .tr-board__head{ padding:14px 16px; flex-wrap:wrap; }
+  .tr-board__foot{ padding:12px 16px 16px; }
+}
+</style>
+</head>
+<body>
+
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="nav" id="nav">
+  <div class="wrap nav__inner">
+    <a class="brand" href="index.html" aria-label="Homefield home">
+      <svg class="brand__mark" viewBox="0 0 32 32" aria-hidden="true">
+        <circle cx="16" cy="16" r="15" fill="none" stroke="currentColor" stroke-width="1.5" opacity=".35"/>
+        <path d="M9 8 H23 V17 L16 24 L9 17 Z" fill="currentColor"/>
+        <path d="M16 8 H23 V17 L16 24 Z" fill="currentColor" opacity=".45"/>
+      </svg>
+      <span class="brand__word">Homefield</span>
+    </a>
+
+    <nav class="nav__links" aria-label="Primary">
+      <a href="how-it-works.html">How it works</a>
+      <a href="leads.html">The leads</a>
+      <a href="territory.html">Territory</a>
+      <a href="compare.html">Compare</a>
+      <a href="pricing.html">Pricing</a>
+      <a href="faq.html">FAQ</a>
+    </nav>
+
+    <div class="nav__cta">
+      <a class="btn btn--ghost btn--sm" href="contact.html">Book a call</a>
+    </div>
+
+    <button class="nav__toggle" id="navToggle" aria-expanded="false" aria-controls="mobileNav" aria-label="Open menu">
+      <span></span><span></span>
+    </button>
+  </div>
+  <div class="mobilenav" id="mobileNav" hidden>
+    <a href="how-it-works.html">How it works</a>
+    <a href="leads.html">The leads</a>
+    <a href="territory.html">Territory</a>
+    <a href="compare.html">Compare</a>
+    <a href="pricing.html">Pricing</a>
+    <a href="faq.html">FAQ</a>
+    <a class="btn btn--primary" href="contact.html">Book a call</a>
+  </div>
+</header>
+
+<main id="main">
+
+<!-- ── HERO ──────────────────────────────────────────── -->
+<section class="hero hero--page">
+  <div class="hero__glow" aria-hidden="true"></div>
+  <div class="wrap hero__inner">
+    <p class="eyebrow reveal">Territory</p>
+    <h1 class="hero__h1 reveal">
+      One agency per ZIP.<br>
+      <em>That's the whole rule.</em>
+    </h1>
+    <p class="hero__sub reveal">
+      Claim 100–500 ZIP codes, and every qualified reply inside them is yours alone —
+      held while you're active, released only if you leave. No auctions, no tiers of exclusivity.
+    </p>
+  </div>
+</section>
+
+<!-- ── WHY EXCLUSIVITY IS THE PRODUCT ────────────────── -->
+<section class="section">
+  <div class="wrap grid-2">
+    <div class="grid-2__text">
+      <p class="eyebrow eyebrow--dark">Why it matters</p>
+      <h2>Exclusivity isn't a feature. It's the product.</h2>
+      <p class="lede">
+        Every shared lead started life as a good lead — a homeowner who actually wanted a quote.
+        Then the vendor sold that one moment of interest to four, six, eight agencies at once,
+        and by the third voicemail the homeowner stopped being interested in anyone.
+      </p>
+      <p>
+        The failure isn't in the lead. It's in the crowd around it. So we removed the crowd:
+        when a homeowner in your ZIPs replies, you are the only agency that will ever hear about
+        it — not the fastest dialer, not the highest bidder. The only one. Everything else on
+        this page is just the paperwork around that sentence.
+      </p>
+      <a class="btn btn--dark" href="contact.html">Check if your ZIPs are open</a>
+    </div>
+    <div class="grid-2__visual">
+      <div class="map" role="img" aria-label="Illustration of ZIP codes locked to a single agency">
+        <div class="map__grid">
+          <!-- decorative -->
+        </div>
+        <div class="map__legend">
+          <span><i class="sw sw--locked"></i> Claimed</span>
+          <span><i class="sw sw--open"></i> Open</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── THE RULES ─────────────────────────────────────── -->
+<section class="section section--paper">
+  <div class="wrap">
+    <div class="sechead sechead--center">
+      <p class="eyebrow eyebrow--dark">The rules</p>
+      <h2>Three rules. No asterisks.</h2>
+    </div>
+
+    <ol class="steps">
+      <li class="step">
+        <p class="step__n">01</p>
+        <h3>Claimed on signature</h3>
+        <p>You choose 100–500 ZIP codes at onboarding. The moment you sign, they're yours — first come, first served, and a bigger budget doesn't jump the line.</p>
+      </li>
+      <li class="step">
+        <p class="step__n">02</p>
+        <h3>Held while active</h3>
+        <p>As long as you're active, no other Homefield client can ever be sold into your ZIPs. The dedupe runs network-wide, across every campaign we send, automatically.</p>
+      </li>
+      <li class="step">
+        <p class="step__n">03</p>
+        <h3>Released 30 days after inactive</h3>
+        <p>Go inactive and your territory releases 30 days later. Fair-use, in both directions: territories never sit dead, and nobody can squat on ZIPs they aren't working.</p>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<!-- ── EXPANSION ─────────────────────────────────────── -->
+<section class="section section--tight">
+  <div class="wrap wrap--narrow">
+    <div class="sechead">
+      <p class="eyebrow eyebrow--dark">Expansion</p>
+      <h2>Growing? Take the ZIP next door.</h2>
+      <p class="lede">
+        Territories aren't frozen at onboarding. Any adjacent ZIP that's still open
+        can be added to yours whenever you want it.
+      </p>
+    </div>
+    <ul class="ticks">
+      <li><strong>Adjacent open ZIPs, anytime</strong> — they lock to you the moment you claim them</li>
+      <li><strong>Your tier sets the ceiling</strong> — up to 150 ZIPs on Starter, 350 on Growth, 500 on Scale</li>
+      <li><strong>No expansion fee</strong> — new ZIPs fold into the same sequence at the same per-lead price</li>
+      <li><strong>The fence protects you too</strong> — if the ZIP you want is claimed, it stays claimed while that agency is active</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ── AVAILABILITY ──────────────────────────────────── -->
+<section class="section section--dark">
+  <div class="wrap wrap--narrow">
+    <div class="sechead sechead--center sechead--onDark">
+      <p class="eyebrow">Availability</p>
+      <h2>Availability right now</h2>
+      <p class="lede">
+        A metro-level snapshot. "Claimed" metros usually still have open ZIPs at the
+        edges — the live ZIP-by-ZIP board comes out on a call.
+      </p>
+    </div>
+
+    <!-- SAMPLE CONTENT — replace with live territory availability before launch -->
+    <div class="tr-board">
+      <div class="tr-board__head">
+        <p class="tr-board__title">Territory board</p>
+        <p class="tr-board__stamp">Updated weekly</p>
+      </div>
+      <div class="tr-tablewrap">
+        <table class="tr-table">
+          <thead>
+            <tr>
+              <th scope="col">Metro</th>
+              <th scope="col">State</th>
+              <th scope="col" class="tr-status">Status</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row" class="tr-metro">Phoenix metro</th>
+              <td class="tr-state">AZ</td>
+              <td class="tr-status"><span class="tr-pill tr-pill--claimed">Claimed since March</span></td>
+            </tr>
+            <tr>
+              <th scope="row" class="tr-metro">Columbus metro</th>
+              <td class="tr-state">OH</td>
+              <td class="tr-status"><span class="tr-pill tr-pill--open">Open</span></td>
+            </tr>
+            <tr>
+              <th scope="row" class="tr-metro">Charlotte metro</th>
+              <td class="tr-state">NC</td>
+              <td class="tr-status"><span class="tr-pill tr-pill--claimed">Claimed since January</span></td>
+            </tr>
+            <tr>
+              <th scope="row" class="tr-metro">Kansas City metro</th>
+              <td class="tr-state">MO</td>
+              <td class="tr-status"><span class="tr-pill tr-pill--open">Open</span></td>
+            </tr>
+            <tr>
+              <th scope="row" class="tr-metro">Tampa metro</th>
+              <td class="tr-state">FL</td>
+              <td class="tr-status"><span class="tr-pill tr-pill--wait">Waitlist — high demand</span></td>
+            </tr>
+            <tr>
+              <th scope="row" class="tr-metro">Nashville metro</th>
+              <td class="tr-state">TN</td>
+              <td class="tr-status"><span class="tr-pill tr-pill--claimed">Claimed since May</span></td>
+            </tr>
+            <tr class="tr-row--you">
+              <th scope="row" class="tr-metro">Your metro</th>
+              <td class="tr-state">—</td>
+              <td class="tr-status"><a class="tr-pill tr-pill--check" href="contact.html">Check on a call →</a></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="tr-board__foot">
+        Availability moves as agencies claim and expand. If your metro shows claimed,
+        ask anyway — territories are drawn in ZIPs, not city limits.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ── TERRITORY FAQ ─────────────────────────────────── -->
+<section class="section section--paper">
+  <div class="wrap wrap--narrow">
+    <div class="sechead sechead--center">
+      <p class="eyebrow eyebrow--dark">Territory FAQ</p>
+      <h2>The fine print, out loud</h2>
+    </div>
+
+    <div class="faq">
+      <details class="faq__item">
+        <summary>Can another agency outbid me for my ZIPs?</summary>
+        <div class="faq__a"><p>No. Territories are first come, first served, and held for as long as you're active. There's no auction, no premium tier, and no phone call a bigger agency can make. Money doesn't move the fence.</p></div>
+      </details>
+      <details class="faq__item">
+        <summary>Can I reserve ZIPs before I've onboarded?</summary>
+        <div class="faq__a"><p>We'll put a soft hold on your ZIPs through your onboarding call, so nobody claims them out from under you while you decide. After the call, a signature is what locks them — soft holds don't stretch indefinitely.</p></div>
+      </details>
+      <details class="faq__item">
+        <summary>What happens to my leads if I leave?</summary>
+        <div class="faq__a"><p>They're yours forever. Every reply generated in your territory belongs to you with full follow-up rights — quoting a lead six months after you've left is fine. Leaving releases your ZIPs after 30 days; it never claws back a lead.</p></div>
+      </details>
+      <details class="faq__item">
+        <summary>We have two offices in one metro. How does that work?</summary>
+        <div class="faq__a"><p>One territory, routed by ZIP. On the Scale plan, multi-office routing sends each lead to whichever office owns that ZIP — one agreement, one dedupe, no internal collisions.</p></div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<section class="section section--cta">
+  <div class="wrap">
+    <div class="ctaband">
+      <h2>Let's see if your ZIPs are open.</h2>
+      <p>Fifteen minutes. We'll pull your territory live on the call, show you real replies from agencies your size, and tell you honestly if this beats what you're already running.</p>
+      <div class="ctaband__actions">
+        <a class="btn btn--primary btn--lg" href="contact.html">Book a call</a>
+        <a class="btn btn--quiet btn--lg" href="pricing.html">See pricing →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="foot">
+  <div class="wrap foot__inner">
+    <div class="foot__brand">
+      <a class="brand brand--foot" href="index.html">
+        <svg class="brand__mark" viewBox="0 0 32 32" aria-hidden="true">
+          <circle cx="16" cy="16" r="15" fill="none" stroke="currentColor" stroke-width="1.5" opacity=".35"/>
+          <path d="M9 8 H23 V17 L16 24 L9 17 Z" fill="currentColor"/>
+          <path d="M16 8 H23 V17 L16 24 Z" fill="currentColor" opacity=".45"/>
+        </svg>
+        <span class="brand__word">Homefield</span>
+      </a>
+      <p>Exclusive homeowner insurance leads for independent agencies.</p>
+    </div>
+    <nav class="foot__links" aria-label="Footer">
+      <div>
+        <h5>Product</h5>
+        <a href="how-it-works.html">How it works</a>
+        <a href="leads.html">The leads</a>
+        <a href="territory.html">Territory</a>
+        <a href="compare.html">Compare</a>
+      </div>
+      <div>
+        <h5>Company</h5>
+        <a href="pricing.html">Pricing</a>
+        <a href="faq.html">FAQ</a>
+        <a href="contact.html">Book a call</a>
+      </div>
+      <div>
+        <h5>Legal</h5>
+        <a href="privacy.html">Privacy</a>
+        <a href="terms.html">Terms</a>
+      </div>
+    </nav>
+  </div>
+  <div class="wrap foot__bar">
+    <p>&copy; <span id="yr">2026</span> Homefield. All rights reserved.</p>
+    <p>Mailing address goes here · CAN-SPAM compliant sending</p>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

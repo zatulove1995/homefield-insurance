@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Compare — Homefield</title>
+<meta name="description" content="Homefield vs direct mail vs shared lead vendors like EverQuote and QuoteWizard: cost per acquisition, exclusivity, speed — and an honest list of when we're not the right fit.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css?v=nb2">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='16' fill='%230A0D14'/%3E%3Cpath d='M9 9h14v8.5L16 25l-7-7.5z' fill='%232E5BFF'/%3E%3C/svg%3E">
+<script>document.documentElement.className += ' js';</script>
+<style>
+/* compare.html page components */
+.cp-concede{
+  background:var(--paper); border:1px solid var(--line); border-left:3px solid var(--teal);
+  border-radius:var(--r-lg); padding:28px 30px; box-shadow:var(--shadow-sm);
+}
+.cp-concede__label{
+  font-family:var(--mono); font-size:11.5px; font-weight:500; letter-spacing:.1em;
+  text-transform:uppercase; color:var(--teal); margin-bottom:12px;
+}
+.cp-concede p{ font-size:16px; line-height:1.65; color:var(--muted); }
+.cp-concede p strong{ color:var(--ink); font-weight:600; }
+.cp-concede--after{ margin-top:44px; }
+
+.cp-cards{ display:grid; grid-template-columns:repeat(3,1fr); gap:20px; }
+.cp-card{
+  background:var(--paper); border:1px solid var(--line); border-radius:var(--r-lg);
+  padding:30px 28px 32px;
+}
+.cp-card__tag{
+  font-family:var(--mono); font-size:12px; font-weight:500; letter-spacing:.1em;
+  text-transform:uppercase; color:var(--muted); margin-bottom:18px;
+}
+.cp-card h3{ font-size:20px; margin-bottom:10px; }
+.cp-card p{ font-size:15.5px; color:var(--muted); line-height:1.6; }
+
+.cp-prose p{ font-size:16.5px; line-height:1.7; color:var(--muted); margin-bottom:18px; }
+.cp-prose p strong{ color:var(--ink); font-weight:600; }
+.cp-prose .ticks{ margin:26px 0; }
+
+@media (max-width:960px){
+  .cp-cards{ grid-template-columns:1fr; }
+}
+</style>
+</head>
+<body>
+
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="nav" id="nav">
+  <div class="wrap nav__inner">
+    <a class="brand" href="index.html" aria-label="Homefield home">
+      <svg class="brand__mark" viewBox="0 0 32 32" aria-hidden="true">
+        <circle cx="16" cy="16" r="15" fill="none" stroke="currentColor" stroke-width="1.5" opacity=".35"/>
+        <path d="M9 8 H23 V17 L16 24 L9 17 Z" fill="currentColor"/>
+        <path d="M16 8 H23 V17 L16 24 Z" fill="currentColor" opacity=".45"/>
+      </svg>
+      <span class="brand__word">Homefield</span>
+    </a>
+
+    <nav class="nav__links" aria-label="Primary">
+      <a href="how-it-works.html">How it works</a>
+      <a href="leads.html">The leads</a>
+      <a href="territory.html">Territory</a>
+      <a href="compare.html">Compare</a>
+      <a href="pricing.html">Pricing</a>
+      <a href="faq.html">FAQ</a>
+    </nav>
+
+    <div class="nav__cta">
+      <a class="btn btn--ghost btn--sm" href="contact.html">Book a call</a>
+    </div>
+
+    <button class="nav__toggle" id="navToggle" aria-expanded="false" aria-controls="mobileNav" aria-label="Open menu">
+      <span></span><span></span>
+    </button>
+  </div>
+  <div class="mobilenav" id="mobileNav" hidden>
+    <a href="how-it-works.html">How it works</a>
+    <a href="leads.html">The leads</a>
+    <a href="territory.html">Territory</a>
+    <a href="compare.html">Compare</a>
+    <a href="pricing.html">Pricing</a>
+    <a href="faq.html">FAQ</a>
+    <a class="btn btn--primary" href="contact.html">Book a call</a>
+  </div>
+</header>
+
+<main id="main">
+
+<!-- ── HERO ──────────────────────────────────────────── -->
+<section class="hero hero--page">
+  <div class="hero__glow" aria-hidden="true"></div>
+  <div class="wrap hero__inner">
+    <p class="eyebrow reveal">Compare</p>
+    <h1 class="hero__h1 reveal">
+      The same growth budget,<br>
+      <em>three ways.</em>
+    </h1>
+    <p class="hero__sub reveal">
+      Direct mail, shared lead vendors, or Homefield. Here's the honest math on all three —
+      including where the other two are genuinely better, and when we'd tell you not to hire us.
+    </p>
+  </div>
+</section>
+
+<!-- ── CAC CARDS ─────────────────────────────────────── -->
+<section class="section section--tight">
+  <div class="wrap">
+    <div class="sechead">
+      <p class="eyebrow eyebrow--dark">The real math</p>
+      <h2>What agencies actually pay to acquire one policy</h2>
+      <p class="lede">
+        Nobody quotes you a cost per <em>acquisition</em> — they quote you a cost per postcard,
+        or per shared lead. Here's what the same acquired customer costs across the three ways
+        agencies buy growth today.
+      </p>
+    </div>
+
+    <div class="cac">
+      <article class="cac__card">
+        <p class="cac__label">Direct mail</p>
+        <p class="cac__num">$250<span>–$750</span></p>
+        <p class="cac__unit">per acquired policy</p>
+        <ul class="cac__list">
+          <li>Print, postage &amp; list costs paid up front</li>
+          <li>2–4 weeks before you know anything</li>
+          <li>Typical response under 1%</li>
+          <li>No conversation — just a phone number, maybe</li>
+        </ul>
+      </article>
+
+      <article class="cac__card">
+        <p class="cac__label">Shared lead vendors</p>
+        <p class="cac__num">$180<span>–$400</span></p>
+        <p class="cac__unit">per acquired policy</p>
+        <ul class="cac__list">
+          <li>Same lead sold to 4–8 agents simultaneously</li>
+          <li>You're racing the dial, not selling</li>
+          <li>Form-fill intent, not a real reply</li>
+          <li>Monthly minimums and platform fees</li>
+        </ul>
+      </article>
+
+      <article class="cac__card cac__card--win">
+        <p class="cac__label">Homefield</p>
+        <p class="cac__num">$160<span>–$200</span></p>
+        <p class="cac__unit">per acquired policy</p>
+        <ul class="cac__list">
+          <li>$40 per lead at a 20–25% close rate</li>
+          <li>Yours alone — locked by ZIP code</li>
+          <li>They replied. In writing. Asking for a quote.</li>
+          <li>Pay per lead. Nothing else.</li>
+        </ul>
+        <p class="cac__foot">Roughly a third of a direct mail campaign, for a lead that already answered you.</p>
+      </article>
+    </div>
+
+    <p class="fineprint">
+      Direct mail and shared-lead ranges reflect commonly cited industry figures for P&amp;C personal lines.
+      Homefield's figure assumes $40/lead at the close rates our agencies report — your results depend on your follow-up.
+    </p>
+  </div>
+</section>
+
+<!-- ── COMPARISON TABLE ──────────────────────────────── -->
+<section class="section section--dark">
+  <div class="wrap">
+    <div class="sechead sechead--center sechead--onDark">
+      <p class="eyebrow">Side by side</p>
+      <h2>The same growth budget, three ways</h2>
+    </div>
+
+    <div class="tablewrap">
+      <table class="cmp">
+        <thead>
+          <tr>
+            <th scope="col"><span class="visually-hidden">Metric</span></th>
+            <th scope="col">Direct mail</th>
+            <th scope="col">Shared lead vendors</th>
+            <th scope="col" class="cmp__win">Homefield</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">Cost per acquisition</th>
+            <td>$250–$750</td>
+            <td>$180–$400</td>
+            <td class="cmp__win">$160–$200</td>
+          </tr>
+          <tr>
+            <th scope="row">Time to first lead</th>
+            <td>2–4 weeks</td>
+            <td>Same day</td>
+            <td class="cmp__win">~21 days, then continuous</td>
+          </tr>
+          <tr>
+            <th scope="row">Exclusivity</th>
+            <td>Anyone can mail the same street</td>
+            <td>Sold to 4–8 agents</td>
+            <td class="cmp__win">Yours alone, ZIP-locked</td>
+          </tr>
+          <tr>
+            <th scope="row">What you receive</th>
+            <td>A response, if you're lucky</td>
+            <td>A form submission</td>
+            <td class="cmp__win">A written reply asking for a quote</td>
+          </tr>
+          <tr>
+            <th scope="row">Whose brand is on it</th>
+            <td>Yours</td>
+            <td>Theirs</td>
+            <td class="cmp__win">Yours</td>
+          </tr>
+          <tr>
+            <th scope="row">Targeting control</th>
+            <td>Geographic, broad</td>
+            <td>Whatever they route you</td>
+            <td class="cmp__win">ZIP, value, renewal date, income</td>
+          </tr>
+          <tr>
+            <th scope="row">Commitment</th>
+            <td>Per-drop minimums</td>
+            <td>Monthly spend minimums</td>
+            <td class="cmp__win">None after onboarding</td>
+          </tr>
+          <tr>
+            <th scope="row">Wasted spend</th>
+            <td>Every non-responder</td>
+            <td>Every lead the other 7 agents win</td>
+            <td class="cmp__win">You pay per qualified reply only</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- ── AGAINST DIRECT MAIL ───────────────────────────── -->
+<section class="section section--paper">
+  <div class="wrap grid-2">
+    <div class="grid-2__text">
+      <p class="eyebrow eyebrow--dark">Deep dive</p>
+      <h2>Against direct mail</h2>
+      <p class="lede">
+        The economics of mail are simple and brutal: you pay full price for every homeowner
+        who throws the postcard away, and more than 99% of them do.
+      </p>
+      <ul class="ticks">
+        <li><strong>You pay for every non-responder.</strong> Print, postage, and list costs are spent before the first mailbox opens — the 99% who ignore you fund the campaign.</li>
+        <li><strong>Response runs under 1%.</strong> A good drop is a fraction of a percent, and "response" often means a phone call you still have to convert.</li>
+        <li><strong>You're dark for 2–4 weeks.</strong> No signal, no iteration, no idea whether the creative or the list is the problem until the money is gone.</li>
+        <li><strong>There's no conversation.</strong> At best you get a phone number. A Homefield lead is a written reply you can respond to in their words.</li>
+      </ul>
+    </div>
+    <div class="grid-2__visual">
+      <div class="cp-concede">
+        <p class="cp-concede__label">Where mail still wins</p>
+        <p><strong>Brand saturation.</strong> If your budget is effectively unlimited and the goal is
+        every mailbox in the county seeing your name twelve times a year, mail does that and we don't.
+        We put your name only in front of homeowners approaching renewal — narrower by design.
+        If blanket awareness is the strategy, keep mailing.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── AGAINST SHARED LEAD VENDORS ───────────────────── -->
+<section class="section">
+  <div class="wrap grid-2 grid-2--flip">
+    <div class="grid-2__text">
+      <p class="eyebrow eyebrow--dark">Deep dive</p>
+      <h2>Against shared lead vendors</h2>
+      <p class="lede">
+        EverQuote, QuoteWizard, MediaAlpha — the model is the same everywhere: one form fill,
+        sold to 4–8 agencies at once, and the clock starts.
+      </p>
+      <ul class="ticks">
+        <li><strong>The 4–8 buyer race.</strong> The lead isn't yours — it's a head start you share with up to seven competitors who bought the exact same record.</li>
+        <li><strong>Speed-to-dial is the whole game.</strong> Industry practice is to call within minutes or lose. You're not selling insurance; you're winning a reflex contest.</li>
+        <li><strong>Form-fill intent is thin.</strong> Someone clicked an ad and typed their ZIP to see a number. That's curiosity, not a request. A written reply asking what you'd charge is a request.</li>
+        <li><strong>Minimums and platform fees.</strong> You commit to monthly spend before you've seen a single lead's quality. We bill per qualified reply, nothing else.</li>
+      </ul>
+    </div>
+    <div class="grid-2__visual">
+      <div class="cp-concede">
+        <p class="cp-concede__label">Where vendors still win</p>
+        <p><strong>Instant volume on demand.</strong> If you need leads this afternoon, they will
+        sell you leads this afternoon — no warmup, no list build, dial the budget up or down at will.
+        We take about 21 days to first lead. When speed matters more than exclusivity, they're
+        genuinely the faster tap to open.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── AGAINST DOING IT YOURSELF ─────────────────────── -->
+<section class="section section--paper">
+  <div class="wrap wrap--narrow cp-prose">
+    <div class="sechead">
+      <p class="eyebrow eyebrow--dark">Deep dive</p>
+      <h2>Against doing it yourself</h2>
+      <p class="lede">
+        Fair question, because every piece of this is buyable. Homeowner data, sending tools,
+        warmup services — none of it is secret and none of it is exotic.
+      </p>
+    </div>
+    <p>
+      You could license homeowner records, stand up sending domains, subscribe to a warmup
+      service, and write three emails. Plenty of agencies have tried. The parts that look
+      hard — the data, the tooling — aren't the parts that break.
+    </p>
+    <p>What breaks is the operations layer underneath:</p>
+    <ul class="ticks">
+      <li><strong>Deliverability management.</strong> Keeping dozens of inboxes and domains healthy is a daily job. One bad send pattern and your mail lands in spam for weeks — and nothing on the dashboard tells you why.</li>
+      <li><strong>Reply classification at volume.</strong> Every reply has to be read and graded — interest, auto-reply, bounce, opt-out, hostile — fast enough that real interest gets to a producer while it's warm. At a few hundred replies a month this becomes someone's actual job.</li>
+      <li><strong>The warmup runway.</strong> Fresh domains need 6–8 weeks of warmup before they can send at meaningful volume — one to two months of paying for tools and data with zero leads to show for it. (Our clients skip most of that runway: we maintain pre-warmed sending pools, which is how first leads arrive around day 21 instead of month two.)</li>
+    </ul>
+    <div class="cp-concede cp-concede--after">
+      <p class="cp-concede__label">When DIY is the right call</p>
+      <p><strong>If you have an ops person who genuinely loves this work, consider it.</strong>
+      The math can work — you'd keep our margin. What most agencies discover is that they don't
+      have that person, and a producer doing deliverability triage between quotes is the most
+      expensive version of "free." But if you do have them, we're not going to pretend the
+      arithmetic says otherwise.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ── WHEN WE'RE NOT THE RIGHT FIT ──────────────────── -->
+<section class="section">
+  <div class="wrap">
+    <div class="sechead">
+      <p class="eyebrow eyebrow--dark">Fit</p>
+      <h2>When we're not the right fit</h2>
+      <p class="lede">
+        We'd rather tell you on this page than bill you for three months first.
+        If any of these describes your agency, don't book the call.
+      </p>
+    </div>
+
+    <div class="cp-cards">
+      <article class="cp-card">
+        <p class="cp-card__tag">Not a fit</p>
+        <h3>Territories under ~100 ZIPs of real population</h3>
+        <p>The model runs on renewal volume. Below roughly 100 populated ZIP codes there simply
+        aren't enough homeowners hitting a renewal window each month to produce steady leads —
+        you'd pay onboarding for a trickle. Rural agencies with wide, thin ground usually do
+        better elsewhere.</p>
+      </article>
+      <article class="cp-card">
+        <p class="cp-card__tag">Not a fit</p>
+        <h3>No capacity to quote within a day</h3>
+        <p>Leads decay. A homeowner who wrote back this morning expects an answer today —
+        quote them same-day and they close at the rates on this site; let the reply sit for
+        three days and you're just another cold email. If nobody on your team can turn quotes
+        around inside a day, the leads will be wasted on you.</p>
+      </article>
+      <article class="cp-card">
+        <p class="cp-card__tag">Not a fit</p>
+        <h3>Life- and health-only shops</h3>
+        <p>We do homeowner P&amp;C. That's the data, the timing model, and the copy — all of it
+        is built around a home policy renewing. If your book is life or health and you can't
+        write a homeowners policy, our leads are worth nothing to you, and we won't sell them
+        to you.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ── RUN US ALONGSIDE ──────────────────────────────── -->
+<section class="section section--paper section--tight">
+  <div class="wrap wrap--narrow">
+    <div class="sechead sechead--center">
+      <p class="eyebrow eyebrow--dark">No switching required</p>
+      <h2>Run us alongside what you already do</h2>
+      <p class="lede">
+        You don't have to believe our table. Keep your current channel running for 60 days,
+        put us next to it, and track cost per acquired policy on both — your numbers, your CRM,
+        not our marketing page. Then decide. There's no contract, so if we lose on your math,
+        walking away costs nothing.
+      </p>
+    </div>
+  </div>
+</section>
+
+
+<section class="section section--cta">
+  <div class="wrap">
+    <div class="ctaband">
+      <h2>Let's see if your ZIPs are open.</h2>
+      <p>Fifteen minutes. We'll pull your territory live on the call, show you real replies from agencies your size, and tell you honestly if this beats what you're already running.</p>
+      <div class="ctaband__actions">
+        <a class="btn btn--primary btn--lg" href="contact.html">Book a call</a>
+        <a class="btn btn--quiet btn--lg" href="pricing.html">See pricing →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="foot">
+  <div class="wrap foot__inner">
+    <div class="foot__brand">
+      <a class="brand brand--foot" href="index.html">
+        <svg class="brand__mark" viewBox="0 0 32 32" aria-hidden="true">
+          <circle cx="16" cy="16" r="15" fill="none" stroke="currentColor" stroke-width="1.5" opacity=".35"/>
+          <path d="M9 8 H23 V17 L16 24 L9 17 Z" fill="currentColor"/>
+          <path d="M16 8 H23 V17 L16 24 Z" fill="currentColor" opacity=".45"/>
+        </svg>
+        <span class="brand__word">Homefield</span>
+      </a>
+      <p>Exclusive homeowner insurance leads for independent agencies.</p>
+    </div>
+    <nav class="foot__links" aria-label="Footer">
+      <div>
+        <h5>Product</h5>
+        <a href="how-it-works.html">How it works</a>
+        <a href="leads.html">The leads</a>
+        <a href="territory.html">Territory</a>
+        <a href="compare.html">Compare</a>
+      </div>
+      <div>
+        <h5>Company</h5>
+        <a href="pricing.html">Pricing</a>
+        <a href="faq.html">FAQ</a>
+        <a href="contact.html">Book a call</a>
+      </div>
+      <div>
+        <h5>Legal</h5>
+        <a href="privacy.html">Privacy</a>
+        <a href="terms.html">Terms</a>
+      </div>
+    </nav>
+  </div>
+  <div class="wrap foot__bar">
+    <p>&copy; <span id="yr">2026</span> Homefield. All rights reserved.</p>
+    <p>Mailing address goes here · CAN-SPAM compliant sending</p>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
