@@ -426,6 +426,8 @@ a{ color:inherit; text-decoration:none; }
 .tier__price{ font-family:var(--serif); font-size:58px; line-height:1; letter-spacing:-.03em; }
 .tier__price span{ font-family:var(--sans); font-size:16px; font-weight:500; color:var(--muted); letter-spacing:0; }
 .tier--feature .tier__price span{ color:var(--muted-dark); }
+.tier__price--label{ font-size:34px; padding-top:10px; }
+.tier__price--label span{ display:block; margin-top:6px; font-size:13px; }
 .tier__vol{ font-size:14.5px; color:var(--muted); margin:12px 0 26px; }
 .tier--feature .tier__vol{ color:var(--muted-dark); }
 
@@ -583,3 +585,7 @@ a{ color:inherit; text-decoration:none; }
 .nav__links a.is-current{ color:#fff; font-weight:600; }
 .nav.is-solid .nav__links a.is-current{ color:var(--ink); }
 .mobilenav a.is-current{ color:var(--accent); }
+
+.targeting--flush{ margin-top:0; padding-top:0; border-top:0; }
+.link{ font-weight:600; color:var(--accent); }
+.link:hover{ color:var(--accent-ink); }

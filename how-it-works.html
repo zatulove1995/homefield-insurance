@@ -4,18 +4,21 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>How it works — Homefield</title>
-<meta name="description" content="The full Homefield process: 275M+ homeowner records, renewal-timed plain-text email sent in your agency's name, every reply read and graded, first qualified leads around day 21.">
+<meta name="description" content="The full Homefield process: 275M+ homeowner records, plain-text email timed to the moment a homeowner is ready and sent in your business's name, every reply read and graded, first qualified leads around day 21.">
+<meta property="og:title" content="How it works — Homefield">
+<meta property="og:description" content="The full Homefield process: 275M+ homeowner records, plain-text email timed to the moment a homeowner is ready and sent in your business's name, every reply read and graded, first qualified leads around day 21.">
+<meta property="og:type" content="website">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css?v=nb2">
+<link rel="stylesheet" href="styles.css?v=nb3">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='16' fill='%230A0D14'/%3E%3Cpath d='M9 9h14v8.5L16 25l-7-7.5z' fill='%232E5BFF'/%3E%3C/svg%3E">
 <script>document.documentElement.className += ' js';</script>
 <style>
 /* ── how-it-works page components ───────────────────── */
 
-/* five targeting filters */
-.hw-filters{ display:grid; grid-template-columns:repeat(5,1fr); gap:16px; margin-bottom:56px; }
+/* eight targeting filters */
+.hw-filters{ display:grid; grid-template-columns:repeat(4,1fr); gap:16px; margin-bottom:56px; }
 .hw-filter{
   background:var(--paper); border:1px solid var(--line); border-radius:var(--r);
   padding:22px 20px;
@@ -41,6 +44,8 @@
 .hw-mail .reply__body{ padding-bottom:24px; }
 .hw-mail .reply__body p{ margin:0 0 14px; }
 .hw-mail .reply__body p:last-child{ margin-bottom:0; }
+/* one-line note under the sample email card */
+.hw-mail__note{ margin-top:14px; font-size:13.5px; color:var(--muted); line-height:1.6; }
 
 /* two-column block on the dark reply-handling section */
 .hw-cols{ display:grid; grid-template-columns:1fr 1fr; gap:56px; align-items:start; }
@@ -95,6 +100,7 @@
     </a>
 
     <nav class="nav__links" aria-label="Primary">
+      <a href="industries.html">Industries</a>
       <a href="how-it-works.html">How it works</a>
       <a href="leads.html">The leads</a>
       <a href="compare.html">Compare</a>
@@ -111,6 +117,7 @@
     </button>
   </div>
   <div class="mobilenav" id="mobileNav" hidden>
+    <a href="industries.html">Industries</a>
     <a href="how-it-works.html">How it works</a>
     <a href="leads.html">The leads</a>
     <a href="compare.html">Compare</a>
@@ -132,7 +139,7 @@
       <em>Then it compounds.</em>
     </h1>
     <p class="hero__sub reveal">
-      This page is the whole machine — the data, the sequence, the reply grading,
+      This page is the whole machine — the data, the timing signals, the sequence, the reply grading,
       and the clock from signature to your first qualified lead.
     </p>
   </div>
@@ -150,17 +157,17 @@
       <li class="step">
         <p class="step__n">01</p>
         <h3>Claim your territory</h3>
-        <p>Pick 100–500 ZIP codes. Once they're yours, we won't sell them to another agency — first come, first served, no exceptions.</p>
+        <p>Pick 100–500 ZIP codes. Once they're yours, we won't sell them to another business in your industry — first come, first served, no exceptions.</p>
       </li>
       <li class="step">
         <p class="step__n">02</p>
         <h3>We run the outreach</h3>
-        <p>A personal three-email sequence, seven days apart, sent from warmed domains that carry your agency's name — timed to land 30–45 days before renewal.</p>
+        <p>A personal three-email sequence, seven days apart, sent from warmed domains that carry your business's name — timed to the moment a homeowner is actually ready: the policy about to renew, the roof hitting year 18, the equity that says it's time to sell.</p>
       </li>
       <li class="step">
         <p class="step__n">03</p>
         <h3>Replies land where you work</h3>
-        <p>An interested homeowner writes back, you get a Slack ping and a full record in your CRM within minutes. You quote. We keep sending.</p>
+        <p>An interested homeowner writes back, you get a Slack ping and a full record in your CRM within minutes. You take it from there. We keep sending.</p>
       </li>
     </ol>
   </div>
@@ -173,8 +180,8 @@
       <p class="eyebrow eyebrow--dark">Data &amp; targeting</p>
       <h2>Start from 275M+ records. End with your list.</h2>
       <p class="lede">
-        Every campaign is cut from a national homeowner database and filtered five ways,
-        so the only people who get an email are the ones worth your time to quote.
+        Every campaign is cut from a national homeowner database and filtered up to eight ways,
+        so the only people who get an email are the ones worth your time to talk to.
       </p>
     </div>
 
@@ -187,42 +194,61 @@
       <div class="hw-filter">
         <p class="hw-filter__n">FILTER 02</p>
         <h3>Home value</h3>
-        <p>A floor and a ceiling, so outreach matches the book you actually want to write.</p>
+        <p>A floor and a ceiling, so outreach matches the homes you actually want to work with.</p>
       </div>
       <div class="hw-filter">
         <p class="hw-filter__n">FILTER 03</p>
-        <h3>Renewal window</h3>
-        <p>Timed so the email lands 30–45 days before the policy renews.</p>
+        <h3>Home &amp; system age</h3>
+        <p>Modeled from build year, permits, and property records — so the email lands when the roof is past year 18 or the HVAC past year 12.</p>
       </div>
       <div class="hw-filter">
         <p class="hw-filter__n">FILTER 04</p>
-        <h3>Ownership length</h3>
-        <p>Long-tenured owners — the ones least likely to have re-shopped in years.</p>
+        <h3>Renewal window</h3>
+        <p>For insurance: timed so the email lands 30–45 days before the policy renews.</p>
       </div>
       <div class="hw-filter">
         <p class="hw-filter__n">FILTER 05</p>
+        <h3>Ownership length</h3>
+        <p>Long-tenured owners — the ones least likely to have re-shopped anything in years, and the likeliest to be ready for what comes next.</p>
+      </div>
+      <div class="hw-filter">
+        <p class="hw-filter__n">FILTER 06</p>
+        <h3>Equity band</h3>
+        <p>The equity that says a sale is realistic — for agents and investors, the filter that matters most.</p>
+      </div>
+      <div class="hw-filter">
+        <p class="hw-filter__n">FILTER 07</p>
         <h3>Income band</h3>
-        <p>Estimated household income, so the premium conversation fits the household.</p>
+        <p>Estimated household income, so the price conversation fits the household.</p>
+      </div>
+      <div class="hw-filter">
+        <p class="hw-filter__n">FILTER 08</p>
+        <h3>Owner-occupancy</h3>
+        <p>For investors: absentee owners and tired landlords — the homeowners likeliest to sell direct, off-market, as-is.</p>
       </div>
     </div>
 
     <div class="hw-note">
-      <h3>How we know when a policy renews</h3>
+      <h3>How we know the moment</h3>
       <p>
-        We don't — not exactly. Nobody outside the carrier does, and any vendor who tells you
-        otherwise is selling you something.
+        We don't — not exactly. Nobody outside the carrier knows the renewal date, nobody outside
+        the household knows the roof is failing, and nobody knows a homeowner has decided to sell
+        until they say so. Any vendor who tells you otherwise is selling you something.
       </p>
       <p>
-        What we do know is when the home was purchased, because closing dates are public record —
-        and home policies typically renew on the closing anniversary. We model the renewal month
-        from that. <strong>Most of our outreach lands inside the 30–45 day window. Not all of it.</strong>
-        A policy that was rewritten mid-term drifts off its anniversary, and for those homeowners
+        What we do know is what public records tell us. Closing dates are public, and home policies
+        typically renew on the closing anniversary — so we model the renewal month from that. Build
+        year, permits, and property records tell us roughly how old a roof or an HVAC system is, so
+        we model when it's aging into replacement range. Tenure, equity, absentee ownership, and
+        life-stage signals tell us when a sale is realistic. <strong>Most of our outreach lands inside
+        the window. Not all of it.</strong> A policy rewritten mid-term drifts off its anniversary, a
+        roof gets replaced without a permit, an owner sells a year early — and for those homeowners
         the email arrives early or late instead of on time.
       </p>
       <p>
-        When it does, the email is still a relevant note from a local agency to a homeowner who
-        pays for insurance — and the ones who reply are still shopping. We'd rather explain how
-        the model works than pretend we have carrier data nobody sells.
+        When it does, the email is still a relevant note from a local business to a homeowner who
+        owns the house — and the ones who reply are still ready. We'd rather explain how the model
+        works than pretend we have data nobody sells.
       </p>
     </div>
   </div>
@@ -235,12 +261,12 @@
       <p class="eyebrow eyebrow--dark">The sequence</p>
       <h2>Three short emails that read like a person wrote them.</h2>
       <p class="lede">
-        Plain text, first person, your agency's name on every one. No logos, no image banners,
+        Plain text, first person, your business's name on every one. No logos, no image banners,
         no "Dear Valued Homeowner." That's why people write back.
       </p>
       <ul class="ticks">
         <li><strong>Three emails over 14 days</strong> — seven days apart, then the sequence ends</li>
-        <li><strong>Sent from warmed domains carrying your agency's name</strong> — the homeowner is talking to you from the first sentence</li>
+        <li><strong>Sent from warmed domains carrying your business's name</strong> — the homeowner is talking to you from the first sentence</li>
         <li><strong>Your real domain is never touched</strong> — zero deliverability risk to the email you run your business on</li>
         <li><strong>A reply exits the sequence instantly</strong> — nobody who answers ever gets another automated touch</li>
       </ul>
@@ -268,12 +294,13 @@
           </p>
           <p>
             We're a local independent agency, and we'd be glad to run a comparison before the
-            renewal lands. It takes about a day and there's no obligation — just reply here
+            renewal lands. It takes about ten minutes and there's no obligation — just reply here
             and we'll get started.
           </p>
           <p>— Jordan, Ellis Insurance Group</p>
         </div>
       </div>
+      <p class="hw-mail__note">Insurance shown. Home services, agent, and investor sequences follow the same shape — same length, same plain-text register, a different moment.</p>
     </div>
   </div>
 </section>
@@ -308,7 +335,7 @@
           <li><strong>Slack</strong> — a ping the moment the reply grades qualified</li>
           <li><strong>Your CRM</strong> — pushed by webhook, no CSV exports, no copy-paste</li>
         </ul>
-        <p class="hw-cols__foot">A qualified lead is a homeowner asking for a quote, asking what you'd charge, or asking to be called — in their own words.</p>
+        <p class="hw-cols__foot">A qualified lead is a homeowner asking for a quote, an estimate, a valuation, or an offer — asking what you'd charge, or asking to be called — in their own words.</p>
       </div>
     </div>
   </div>
@@ -322,12 +349,14 @@
       <h2>When hail hits your ZIPs, we're already writing.</h2>
       <p class="lede">
         After a major wind or hail event in your territory, we run an additional outreach wave —
-        separate from the renewal calendar — while coverage is on homeowners' minds. It's the week
-        people discover their deductible, question their carrier, and actually answer email about insurance.
+        separate from the regular calendar — while the roof and the coverage are both on homeowners'
+        minds. It's the week people find the leak, discover their deductible, question their carrier,
+        and actually answer email from a roofer or an insurance agency.
       </p>
     </div>
     <ul class="ticks">
       <li><strong>Included, no extra cost</strong> — storm-wave replies are billed at your same per-lead rate</li>
+      <li><strong>Roofing and insurance</strong> — the roofer in a ZIP gets the estimate requests, the agency in the same ZIP gets the quote requests; neither is ever sold the other's reply</li>
       <li><strong>Your ZIPs only</strong> — the wave runs inside your locked territory, so every reply it produces is yours</li>
     </ul>
   </div>
@@ -345,10 +374,10 @@
       </p>
     </div>
 
-    <div class="targeting">
+    <div class="targeting targeting--flush">
       <div class="targeting__col">
         <h4>Real identity</h4>
-        <p>Every email identifies the actual sender — your agency, by name. No misleading subject lines, no spoofed headers.</p>
+        <p>Every email identifies the actual sender — your business, by name. No misleading subject lines, no spoofed headers.</p>
       </div>
       <div class="targeting__col">
         <h4>Physical address</h4>
@@ -385,19 +414,19 @@
         <span class="hw-tl__dot" aria-hidden="true"></span>
         <p class="hw-tl__day">Day 0</p>
         <h3>Onboarding call. Territory locked.</h3>
-        <p>You pick your ZIP codes and they lock on signature — from this moment, no other Homefield agency can be sold into them.</p>
+        <p>You pick your ZIP codes and they lock on signature — from this moment, no other Homefield business in your industry can be sold into them.</p>
       </li>
       <li class="hw-tl">
         <span class="hw-tl__dot" aria-hidden="true"></span>
         <p class="hw-tl__day">Days 1–14</p>
         <h3>Domain warmup and list build</h3>
-        <p>We warm sending domains that carry your agency's name and cut your list from 275M+ homeowner records using the five filters above.</p>
+        <p>We warm sending domains that carry your business's name and cut your list from 275M+ homeowner records using the filters above.</p>
       </li>
       <li class="hw-tl">
         <span class="hw-tl__dot" aria-hidden="true"></span>
         <p class="hw-tl__day">Day 15</p>
         <h3>First sends go out</h3>
-        <p>The three-email sequence starts landing, timed to arrive 30–45 days before each homeowner's modeled renewal.</p>
+        <p>The three-email sequence starts landing, timed to each homeowner's moment — 30–45 days before a modeled renewal, a roof aging past year 18, the tenure and equity that say a sale is realistic.</p>
       </li>
       <li class="hw-tl">
         <span class="hw-tl__dot" aria-hidden="true"></span>
@@ -409,7 +438,7 @@
         <span class="hw-tl__dot" aria-hidden="true"></span>
         <p class="hw-tl__day">Ongoing</p>
         <h3>Continuous sending, monthly review</h3>
-        <p>New renewal windows open every week, so sending never stops — and targeting gets reviewed monthly. If quality dips, we re-cut it; you're billed per qualified reply, so weak targeting costs us first.</p>
+        <p>New windows open every week — renewals come due, systems age in, equity builds — so sending never stops, and targeting gets reviewed monthly. If quality dips, we re-cut it; you're billed per qualified reply, so weak targeting costs us first.</p>
       </li>
     </ol>
   </div>
@@ -420,7 +449,7 @@
   <div class="wrap">
     <div class="ctaband">
       <h2>Let's see if your ZIPs are open.</h2>
-      <p>Fifteen minutes. We'll pull your territory live on the call, show you real replies from agencies your size, and tell you honestly if this beats what you're already running.</p>
+      <p>Fifteen minutes. We'll pull your territory live on the call, show you real replies from businesses like yours, and tell you honestly if this beats what you're already running.</p>
       <div class="ctaband__actions">
         <a class="btn btn--primary btn--lg" href="https://calendly.com/zatulovebrian/call" target="_blank" rel="noopener">Book a call</a>
         <a class="btn btn--quiet btn--lg" href="pricing.html">See pricing →</a>
@@ -442,19 +471,21 @@
         </svg>
         <span class="brand__word">Homefield</span>
       </a>
-      <p>Exclusive homeowner insurance leads for independent agencies.</p>
+      <p>Exclusive homeowner leads for home services, insurance, and real estate.</p>
     </div>
     <nav class="foot__links" aria-label="Footer">
       <div>
         <h5>Product</h5>
+        <a href="industries.html">Industries</a>
         <a href="how-it-works.html">How it works</a>
         <a href="leads.html">The leads</a>
-          <a href="compare.html">Compare</a>
+        <a href="compare.html">Compare</a>
       </div>
       <div>
         <h5>Company</h5>
         <a href="pricing.html">Pricing</a>
         <a href="faq.html">FAQ</a>
+        <a href="contact.html">Contact</a>
         <a href="https://calendly.com/zatulovebrian/call" target="_blank" rel="noopener">Book a call</a>
       </div>
       <div>

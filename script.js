@@ -117,7 +117,7 @@ const CALENDLY_URL = 'https://calendly.com/zatulovebrian/call';
     });
 
     if (missing.length) {
-      setStatus('Please fill in your name, agency, and work email.', 'err');
+      setStatus('Please fill in your name, business, and work email.', 'err');
       form.elements[missing[0]].focus();
       return;
     }
@@ -137,6 +137,7 @@ const CALENDLY_URL = 'https://calendly.com/zatulovebrian/call';
       const notes = [
         data.agency && `Agency: ${data.agency}`,
         data.zips && `ZIPs: ${data.zips}`,
+        data.industry && `Industry: ${data.industry}`,
         data.volume && `Leads wanted / mo: ${data.volume}`,
       ].filter(Boolean).join('\n');
       const url = new URL(CALENDLY_URL);

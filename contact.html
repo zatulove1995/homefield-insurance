@@ -4,11 +4,14 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Book a call — Homefield</title>
-<meta name="description" content="Book a 15-minute call. We'll pull your territory live, show you real replies from agencies your size, and you'll know your cost per lead before we hang up.">
+<meta name="description" content="Book a 15-minute call. We'll pull your territory live, show you real replies from businesses like yours, and you'll know your cost per lead before we hang up.">
+<meta property="og:title" content="Book a call — Homefield">
+<meta property="og:description" content="Book a 15-minute call. We'll pull your territory live, show you real replies from businesses like yours, and you'll know your cost per lead before we hang up.">
+<meta property="og:type" content="website">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css?v=nb2">
+<link rel="stylesheet" href="styles.css?v=nb3">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='16' fill='%230A0D14'/%3E%3Cpath d='M9 9h14v8.5L16 25l-7-7.5z' fill='%232E5BFF'/%3E%3C/svg%3E">
 <script>document.documentElement.className += ' js';</script>
 </head>
@@ -28,6 +31,7 @@
     </a>
 
     <nav class="nav__links" aria-label="Primary">
+      <a href="industries.html">Industries</a>
       <a href="how-it-works.html">How it works</a>
       <a href="leads.html">The leads</a>
       <a href="compare.html">Compare</a>
@@ -44,6 +48,7 @@
     </button>
   </div>
   <div class="mobilenav" id="mobileNav" hidden>
+    <a href="industries.html">Industries</a>
     <a href="how-it-works.html">How it works</a>
     <a href="leads.html">The leads</a>
     <a href="compare.html">Compare</a>
@@ -65,7 +70,7 @@
       <em>Your ZIPs, live.</em>
     </h1>
     <p class="hero__sub reveal">
-      We'll pull your territory on the call, show you real replies from agencies your size,
+      We'll pull your territory on the call, show you real replies from businesses like yours,
       and tell you honestly if this beats what you're already running.
     </p>
   </div>
@@ -83,7 +88,7 @@
       <li class="step">
         <p class="step__n">01</p>
         <h3>Your territory goes on soft hold</h3>
-        <p>The ZIPs you asked about are held through onboarding — no other agency can claim them while you decide.</p>
+        <p>The ZIPs you asked about are held for your industry through onboarding — no other business in your industry can claim them while you decide.</p>
       </li>
       <li class="step">
         <p class="step__n">02</p>
@@ -98,7 +103,7 @@
     </ol>
 
     <p class="fineprint fineprint--center">
-      Prefer email? <a href="mailto:hello@homefield.example">hello@homefield.example</a> — same answers, within one business day.
+      Prefer email? <a class="link" href="mailto:hello@homefield.example">hello@homefield.example</a> — same answers, within one business day.
     </p>
   </div>
 </section>
@@ -113,7 +118,7 @@
         <ul class="ticks ticks--light">
           <li>No deck, no pressure</li>
           <li>You'll see live territory availability for your ZIPs</li>
-          <li>Real reply threads from agencies your size</li>
+          <li>Real reply threads from businesses like yours</li>
           <li>You'll know your cost per lead before the call ends</li>
         </ul>
       </div>
@@ -124,12 +129,23 @@
           <input id="f_name" name="name" type="text" autocomplete="name" required placeholder="Jordan Ellis">
         </div>
         <div class="form__row">
-          <label for="f_agency">Agency</label>
-          <input id="f_agency" name="agency" type="text" autocomplete="organization" required placeholder="Ellis Insurance Group">
+          <label for="f_agency">Business</label>
+          <input id="f_agency" name="agency" type="text" autocomplete="organization" required placeholder="Ellis Roofing &amp; Exteriors">
+        </div>
+        <div class="form__row">
+          <label for="f_industry">Industry</label>
+          <select id="f_industry" name="industry">
+            <option value="">Select one</option>
+            <option>Home services</option>
+            <option>Home insurance</option>
+            <option>Real estate agent</option>
+            <option>Real estate investor</option>
+            <option>Other</option>
+          </select>
         </div>
         <div class="form__row">
           <label for="f_email">Work email</label>
-          <input id="f_email" name="email" type="email" autocomplete="email" required placeholder="jordan@ellisins.com">
+          <input id="f_email" name="email" type="email" autocomplete="email" required placeholder="jordan@ellisroofing.com">
         </div>
         <div class="form__row">
           <label for="f_zips">ZIP codes you want</label>
@@ -166,19 +182,21 @@
         </svg>
         <span class="brand__word">Homefield</span>
       </a>
-      <p>Exclusive homeowner insurance leads for independent agencies.</p>
+      <p>Exclusive homeowner leads for home services, insurance, and real estate.</p>
     </div>
     <nav class="foot__links" aria-label="Footer">
       <div>
         <h5>Product</h5>
+        <a href="industries.html">Industries</a>
         <a href="how-it-works.html">How it works</a>
         <a href="leads.html">The leads</a>
-          <a href="compare.html">Compare</a>
+        <a href="compare.html">Compare</a>
       </div>
       <div>
         <h5>Company</h5>
         <a href="pricing.html">Pricing</a>
         <a href="faq.html">FAQ</a>
+        <a href="contact.html">Contact</a>
         <a href="https://calendly.com/zatulovebrian/call" target="_blank" rel="noopener">Book a call</a>
       </div>
       <div>

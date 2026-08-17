@@ -4,11 +4,14 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Pricing — Homefield</title>
-<meta name="description" content="Per-lead pricing for exclusive homeowner insurance leads: $40, $35, or $30 per qualified reply. No platform fee, no setup fee, no annual contract, no minimum after onboarding.">
+<meta name="description" content="Per-lead pricing for exclusive homeowner leads: one rate per qualified reply, set by industry and stepping down with volume. No platform fees, no setup fee, no contract, no minimums after onboarding.">
+<meta property="og:title" content="Pricing — Homefield">
+<meta property="og:description" content="Per-lead pricing for exclusive homeowner leads: one rate per qualified reply, set by industry and stepping down with volume. No platform fees, no setup fee, no contract, no minimums after onboarding.">
+<meta property="og:type" content="website">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css?v=nb2">
+<link rel="stylesheet" href="styles.css?v=nb3">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='16' fill='%230A0D14'/%3E%3Cpath d='M9 9h14v8.5L16 25l-7-7.5z' fill='%232E5BFF'/%3E%3C/svg%3E">
 <script>document.documentElement.className += ' js';</script>
 <style>
@@ -88,6 +91,7 @@
     </a>
 
     <nav class="nav__links" aria-label="Primary">
+      <a href="industries.html">Industries</a>
       <a href="how-it-works.html">How it works</a>
       <a href="leads.html">The leads</a>
       <a href="compare.html">Compare</a>
@@ -104,6 +108,7 @@
     </button>
   </div>
   <div class="mobilenav" id="mobileNav" hidden>
+    <a href="industries.html">Industries</a>
     <a href="how-it-works.html">How it works</a>
     <a href="leads.html">The leads</a>
     <a href="compare.html">Compare</a>
@@ -122,7 +127,7 @@
     <p class="eyebrow reveal">Pricing</p>
     <h1 class="hero__h1 reveal">You pay for replies.<br><em>Nothing else.</em></h1>
     <p class="hero__sub reveal">
-      $40, $35, or $30 per qualified lead — and that's the whole invoice.
+      One rate per qualified lead, set for your industry on the call — and that's the whole invoice.
       No platform fee, no setup fee, no annual contract, no minimum after onboarding.
     </p>
   </div>
@@ -133,14 +138,14 @@
   <div class="wrap">
     <div class="sechead sechead--center">
       <p class="eyebrow eyebrow--dark">Per qualified lead</p>
-      <h2>Three rates. One variable: volume.</h2>
-      <p class="lede">The lead itself is identical at every tier — same data, same sequence, same exclusivity. What changes is the rate, the ZIP capacity, and the service around it.</p>
+      <h2>One rate per lead. It drops with volume.</h2>
+      <p class="lede">The lead itself is identical at every tier — same data, same sequence, same exclusivity. What changes is the rate, the ZIP capacity, and the service around it. Rates are set by industry — a roofing lead, an insurance lead, a listing lead and an off-market seller lead are worth different amounts, so they're priced differently — and every industry's rate steps down as your monthly volume grows.</p>
     </div>
 
     <div class="tiers">
       <article class="tier">
         <p class="tier__name">Starter</p>
-        <p class="tier__price">$40<span>/lead</span></p>
+        <p class="tier__price tier__price--label">Per lead<span>rate quoted by industry</span></p>
         <p class="tier__vol">Up to 50 qualified leads / month</p>
         <ul class="tier__list">
           <li>Up to 150 ZIP codes</li>
@@ -152,9 +157,9 @@
       </article>
 
       <article class="tier tier--feature">
-        <p class="tier__flag">Most agencies start here</p>
+        <p class="tier__flag">Most businesses start here</p>
         <p class="tier__name">Growth</p>
-        <p class="tier__price">$35<span>/lead</span></p>
+        <p class="tier__price tier__price--label">Per lead<span>rate quoted by industry</span></p>
         <p class="tier__vol">51–299 qualified leads / month</p>
         <ul class="tier__list">
           <li>Up to 350 ZIP codes</li>
@@ -168,7 +173,7 @@
 
       <article class="tier">
         <p class="tier__name">Scale</p>
-        <p class="tier__price">$30<span>/lead</span></p>
+        <p class="tier__price tier__price--label">Per lead<span>rate quoted by industry</span></p>
         <p class="tier__vol">300+ qualified leads / month</p>
         <ul class="tier__list">
           <li>Up to 500 ZIP codes</li>
@@ -183,8 +188,8 @@
 
     <p class="fineprint fineprint--center">
       A qualified lead is a homeowner in your territory who replies expressing interest — asking for
-      a quote, asking what you'd charge, asking to be called. Bounces, auto-replies, unsubscribes,
-      wrong contacts, and hostile replies are never billed.
+      a quote, an estimate, a valuation, or an offer; asking what you'd charge; asking to be called.
+      Bounces, auto-replies, unsubscribes, wrong contacts, and hostile replies are never billed.
     </p>
   </div>
 </section>
@@ -196,8 +201,8 @@
       <p class="eyebrow eyebrow--dark">The math, worked</p>
       <h2>What 100 leads a month actually buys</h2>
       <p class="lede">
-        A per-lead price is noise until it becomes a cost per policy. Here's the Growth tier
-        worked end to end — next to the same money spent on postcards.
+        A per-lead price is noise until it becomes a cost per customer. Here's the arithmetic
+        we'll walk you through on the call — next to the same money spent on postcards.
       </p>
     </div>
 
@@ -207,34 +212,35 @@
         <p class="pr-math__title">Homefield — Growth tier</p>
         <dl class="pr-math__rows">
           <div class="pr-math__row"><dt>Qualified leads</dt><dd>100 / mo</dd></div>
-          <div class="pr-math__row"><dt>Growth rate</dt><dd>$35 / lead</dd></div>
-          <div class="pr-math__row"><dt>Monthly spend</dt><dd>$3,500</dd></div>
-          <div class="pr-math__row"><dt>Close rate — within the range agencies report</dt><dd>21%</dd></div>
-          <div class="pr-math__row"><dt>Policies written</dt><dd>21</dd></div>
-          <div class="pr-math__row pr-math__row--total"><dt>Cost per acquired policy</dt><dd>$167</dd></div>
+          <div class="pr-math__row"><dt>Your industry's per-lead rate</dt><dd>R</dd></div>
+          <div class="pr-math__row"><dt>Monthly spend</dt><dd>100 &times; R</dd></div>
+          <div class="pr-math__row"><dt>Close rate — within the range businesses report</dt><dd>21%</dd></div>
+          <div class="pr-math__row"><dt>Customers won</dt><dd>21</dd></div>
+          <div class="pr-math__row pr-math__row--total"><dt>Cost per acquired customer</dt><dd>&asymp; 4.8 &times; R</dd></div>
         </dl>
-        <p class="pr-math__foot">All 100 replied in writing about their renewal. The 79 who didn't close this month are still yours to follow up — forever.</p>
+        <p class="pr-math__foot">All 100 replied in writing, at the moment they were ready. The 79 who didn't close this month are still yours to follow up — forever.</p>
       </article>
 
       <article class="pr-math__card">
-        <p class="pr-math__title">The same $3,500 — direct mail</p>
+        <p class="pr-math__title">The same budget — direct mail</p>
         <dl class="pr-math__rows">
-          <div class="pr-math__row"><dt>Budget</dt><dd>$3,500</dd></div>
-          <div class="pr-math__row"><dt>Postcards it buys, all-in</dt><dd>~6,300</dd></div>
+          <div class="pr-math__row"><dt>Budget</dt><dd>100 &times; R</dd></div>
+          <div class="pr-math__row"><dt>Postcards it buys, all-in</dt><dd>~$0.55 each</dd></div>
           <div class="pr-math__row"><dt>Typical response</dt><dd>Under 1%</dd></div>
           <div class="pr-math__row"><dt>What a response contains</dt><dd>A number, maybe</dd></div>
           <div class="pr-math__row"><dt>Time before you learn anything</dt><dd>~3 weeks</dd></div>
-          <div class="pr-math__row pr-math__row--total"><dt>Cost per acquired policy</dt><dd>$250–$750</dd></div>
+          <div class="pr-math__row pr-math__row--total"><dt>Cost per acquired customer</dt><dd>$250–$750</dd></div>
         </dl>
         <p class="pr-math__foot">No reply thread, no verified email, no record — and anyone can mail the same street next week.</p>
       </article>
     </div>
 
     <p class="fineprint">
-      Consistent with the $160–$200 per-policy range we quote elsewhere: $35–40 per lead at the
-      20–25% close rates our agencies report. The biggest variable is
-      follow-up speed — these are homeowners who just asked for a quote, and close rates track how
-      fast they get one. Direct-mail figures reflect commonly cited industry ranges for P&amp;C personal lines.
+      At the 20–25% close rates businesses report, a qualified lead turns into a customer for roughly
+      four to five times its per-lead rate — whatever that rate is for your industry. The biggest variable is
+      follow-up speed — these are homeowners who just asked for a quote, an estimate, a valuation, or an
+      offer, and close rates track how fast they get one. Direct-mail figures reflect commonly cited
+      industry ranges for local-services direct mail.
     </p>
   </div>
 </section>
@@ -250,11 +256,11 @@
     <div class="targeting pr-includes">
       <div class="targeting__col">
         <h4>The data</h4>
-        <p>275M+ homeowner records, cut five ways — ZIP, home value, renewal window, ownership length, income band. Every tier draws from the same file.</p>
+        <p>275M+ homeowner records, cut by ZIP, home value, home and system age, ownership length, equity band, and income band — plus the per-industry filters: renewal window for insurance, owner-occupancy for investors. Every tier draws from the same file.</p>
       </div>
       <div class="targeting__col">
         <h4>The sending</h4>
-        <p>Warmed domains that carry your agency's name — never your real domain. A personal, plain-text three-email sequence over 14 days.</p>
+        <p>Warmed domains that carry your business's name — never your real domain. A personal, plain-text three-email sequence over 14 days.</p>
       </div>
       <div class="targeting__col">
         <h4>The classification</h4>
@@ -281,22 +287,22 @@
       <li class="step">
         <p class="step__n">01</p>
         <h3>Territory pulled &amp; locked</h3>
-        <p>We pull your ZIPs live, confirm they're open, and lock them to your agency on signature.</p>
+        <p>We pull your ZIPs live, confirm they're open in your industry, and lock them to your business on signature. One business per industry per ZIP.</p>
       </li>
       <li class="step">
         <p class="step__n">02</p>
         <h3>Branding &amp; sender identity</h3>
-        <p>Warmed sending domains are set up carrying your agency's name. Your real domain is never touched.</p>
+        <p>Warmed sending domains are set up carrying your business's name. Your real domain is never touched.</p>
       </li>
       <li class="step">
         <p class="step__n">03</p>
         <h3>Targeting cut</h3>
-        <p>Your list is filtered from 275M+ homeowner records by ZIP, home value, renewal window, ownership length, and income band.</p>
+        <p>Your list is filtered from 275M+ homeowner records by ZIP, home value, home and system age, ownership length, equity band, and income band — plus the timing filter your industry runs on.</p>
       </li>
       <li class="step">
         <p class="step__n">04</p>
         <h3>Sequence approved by you</h3>
-        <p>Three emails, written to sound like your agency. Nothing sends until you've signed off.</p>
+        <p>Three emails, written to sound like your business. Nothing sends until you've signed off.</p>
       </li>
     </ol>
 
@@ -319,15 +325,15 @@
       </details>
       <details class="faq__item">
         <summary>What if I think a lead was graded wrong?</summary>
-        <div class="faq__a"><p>Flag it. We review the full thread, and obvious misgrades are credited — no argument. The definition is narrow on purpose: if a reasonable person wouldn't read the reply as interest, you shouldn't pay for it.</p></div>
+        <div class="faq__a"><p>Flag it. We review the full thread, and obvious misgrades are credited — no argument. The definition is narrow on purpose: if a reasonable person wouldn't read the reply as interest in a quote, an estimate, a valuation, or an offer, you shouldn't pay for it.</p></div>
       </details>
       <details class="faq__item">
         <summary>Can I pause?</summary>
-        <div class="faq__a"><p>Yes, anytime. Your territory holds for 30 days while you're paused; after that it releases and goes back to first come, first served.</p></div>
+        <div class="faq__a"><p>Yes, anytime. Your territory holds for 30 days while you're paused; after that it releases and goes back to first come, first served for the next business in your industry.</p></div>
       </details>
       <details class="faq__item">
         <summary>Do prices drop as volume grows?</summary>
-        <div class="faq__a"><p>Yes — that's what the tiers are. $40 per lead up to 50 a month, $35 from 51, $30 from 300.</p></div>
+        <div class="faq__a"><p>Yes — that's what the tiers are. Your industry's rate steps down at 51 leads a month and again at 300. The rate itself is set per industry, because a roofing lead and an insurance lead aren't worth the same thing.</p></div>
       </details>
       <details class="faq__item">
         <summary>Is there a cap on what I can spend?</summary>
@@ -342,7 +348,7 @@
   <div class="wrap">
     <div class="ctaband">
       <h2>Let's see if your ZIPs are open.</h2>
-      <p>Fifteen minutes. We'll pull your territory live on the call, show you real replies from agencies your size, and tell you honestly if this beats what you're already running.</p>
+      <p>Fifteen minutes. We'll pull your territory live on the call, show you real replies from businesses like yours, and tell you honestly if this beats what you're already running.</p>
       <div class="ctaband__actions">
         <a class="btn btn--primary btn--lg" href="https://calendly.com/zatulovebrian/call" target="_blank" rel="noopener">Book a call</a>
         <a class="btn btn--quiet btn--lg" href="compare.html">See the comparison →</a>
@@ -364,19 +370,21 @@
         </svg>
         <span class="brand__word">Homefield</span>
       </a>
-      <p>Exclusive homeowner insurance leads for independent agencies.</p>
+      <p>Exclusive homeowner leads for home services, insurance, and real estate.</p>
     </div>
     <nav class="foot__links" aria-label="Footer">
       <div>
         <h5>Product</h5>
+        <a href="industries.html">Industries</a>
         <a href="how-it-works.html">How it works</a>
         <a href="leads.html">The leads</a>
-          <a href="compare.html">Compare</a>
+        <a href="compare.html">Compare</a>
       </div>
       <div>
         <h5>Company</h5>
         <a href="pricing.html">Pricing</a>
         <a href="faq.html">FAQ</a>
+        <a href="contact.html">Contact</a>
         <a href="https://calendly.com/zatulovebrian/call" target="_blank" rel="noopener">Book a call</a>
       </div>
       <div>
