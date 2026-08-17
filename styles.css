@@ -214,6 +214,7 @@ a{ color:inherit; text-decoration:none; }
 
 .hero__note{ font-size:14.5px; color:var(--muted-dark); }
 .hero__note strong{ color:#fff; font-weight:600; }
+.hero__sub strong{ color:#fff; font-weight:600; }
 
 .hero__strip{
   display:grid; grid-template-columns:repeat(4,1fr); gap:24px;
