@@ -5,6 +5,7 @@
 
 const FORM_ENDPOINT = '';                    // e.g. 'https://homefield-api.<you>.workers.dev/lead'
 const FALLBACK_EMAIL = 'hello@homefield.example';
+const CALENDLY_URL = 'https://calendly.com/zatulovebrian/call';
 
 /* ── sticky nav: dark over the hero, light once past it ───────────── */
 (() => {
@@ -130,15 +131,20 @@ const FALLBACK_EMAIL = 'hello@homefield.example';
     btn.disabled = true;
     setStatus('Sending…');
 
-    // No backend wired up yet — hand off to the user's mail client.
+    // No backend wired up yet — send them straight to the calendar, with
+    // their answers pre-filled into Calendly's name/email/notes fields.
     if (!FORM_ENDPOINT) {
-      const body = Object.entries(data)
-        .map(([k, v]) => `${k}: ${v || '—'}`)
-        .join('\n');
-      window.location.href =
-        `mailto:${FALLBACK_EMAIL}?subject=${encodeURIComponent('Territory check — ' + data.agency)}` +
-        `&body=${encodeURIComponent(body)}`;
-      setStatus('Opening your email app…', 'ok');
+      const notes = [
+        data.agency && `Agency: ${data.agency}`,
+        data.zips && `ZIPs: ${data.zips}`,
+        data.volume && `Leads wanted / mo: ${data.volume}`,
+      ].filter(Boolean).join('\n');
+      const url = new URL(CALENDLY_URL);
+      if (data.name) url.searchParams.set('name', data.name);
+      if (data.email) url.searchParams.set('email', data.email);
+      if (notes) url.searchParams.set('a1', notes);
+      window.open(url.toString(), '_blank', 'noopener');
+      setStatus('Opening the calendar — pick a time that works.', 'ok');
       btn.disabled = false;
       return;
     }
