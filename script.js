@@ -4,7 +4,7 @@
    Leave it empty and the form falls back to opening a prefilled email. */
 
 const FORM_ENDPOINT = '';                    // e.g. 'https://homefield-api.<you>.workers.dev/lead'
-const FALLBACK_EMAIL = 'hello@homefield.example';
+const FALLBACK_EMAIL = 'brian@settlehouses.com';
 const CALENDLY_URL = 'https://calendly.com/zatulovebrian/call';
 
 /* ── sticky nav: dark over the hero, light once past it ───────────── */
