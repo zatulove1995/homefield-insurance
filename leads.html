@@ -17,6 +17,10 @@
 <style>
 /* leads.html — page-local components (ld- prefix) */
 
+/* disclaimer link sits on the dark record card, where the accent blue is too dim to read */
+.record__foot a{ color:inherit; text-decoration:underline; text-underline-offset:2px; }
+.record__foot a:hover{ color:#fff; }
+
 /* billed / never-billed pair */
 .ld-billing{ display:grid; grid-template-columns:1fr 1fr; gap:20px; align-items:start; }
 .ld-billing__card{
