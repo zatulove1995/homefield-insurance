@@ -175,6 +175,8 @@ document.getElementById('yr').textContent = new Date().getFullYear();
 (() => {
   const here = location.pathname.split('/').pop() || 'index.html';
   document.querySelectorAll('.nav__links a, .mobilenav a').forEach((a) => {
-    if (a.getAttribute('href') === here) a.classList.add('is-current');
+    // hrefs are root-absolute (/faq.html), so compare the last path segment only
+    const target = (a.getAttribute('href') || '').split('/').pop() || 'index.html';
+    if (target === here) a.classList.add('is-current');
   });
 })();

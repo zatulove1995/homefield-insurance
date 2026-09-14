@@ -3,14 +3,18 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#0A0D14">
 <title>Page not found — Homefield</title>
 <meta name="description" content="That page doesn't exist on homefieldemail.com. Head back to the home page or pick a section below.">
 <meta name="robots" content="noindex">
+<link rel="icon" href="/favicon.ico" sizes="32x32">
+<link rel="icon" type="image/png" sizes="48x48" href="/assets/favicon-48.png">
+<link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
+<link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css?v=nb4">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='16' fill='%230A0D14'/%3E%3Cpath d='M9 9h14v8.5L16 25l-7-7.5z' fill='%232E5BFF'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="/styles.css?v=nb5">
 <script>document.documentElement.className += ' js';</script>
 </head>
 <body>
@@ -19,7 +23,7 @@
 
 <header class="nav" id="nav">
   <div class="wrap nav__inner">
-    <a class="brand" href="index.html" aria-label="Homefield home">
+    <a class="brand" href="/" aria-label="Homefield home">
       <svg class="brand__mark" viewBox="0 0 32 32" aria-hidden="true">
         <circle cx="16" cy="16" r="15" fill="none" stroke="currentColor" stroke-width="1.5" opacity=".35"/>
         <path d="M9 8 H23 V17 L16 24 L9 17 Z" fill="currentColor"/>
@@ -29,11 +33,11 @@
     </a>
 
     <nav class="nav__links" aria-label="Primary">
-      <a href="industries.html">Industries</a>
-      <a href="how-it-works.html">How it works</a>
-      <a href="leads.html">The leads</a>
-      <a href="compare.html">Compare</a>
-      <a href="faq.html">FAQ</a>
+      <a href="/industries.html">Industries</a>
+      <a href="/how-it-works.html">How it works</a>
+      <a href="/leads.html">The leads</a>
+      <a href="/compare.html">Compare</a>
+      <a href="/faq.html">FAQ</a>
     </nav>
 
     <div class="nav__cta">
@@ -45,11 +49,11 @@
     </button>
   </div>
   <div class="mobilenav" id="mobileNav" hidden>
-    <a href="industries.html">Industries</a>
-    <a href="how-it-works.html">How it works</a>
-    <a href="leads.html">The leads</a>
-    <a href="compare.html">Compare</a>
-    <a href="faq.html">FAQ</a>
+    <a href="/industries.html">Industries</a>
+    <a href="/how-it-works.html">How it works</a>
+    <a href="/leads.html">The leads</a>
+    <a href="/compare.html">Compare</a>
+    <a href="/faq.html">FAQ</a>
     <a class="btn btn--primary" href="https://calendly.com/zatulovebrian/call" target="_blank" rel="noopener">Book a call</a>
   </div>
 </header>
@@ -58,17 +62,17 @@
 <section class="hero hero--page">
   <div class="hero__glow" aria-hidden="true"></div>
   <div class="wrap hero__inner">
-    <p class="eyebrow reveal">404</p>
-    <h1 class="hero__h1 reveal">
+    <p class="eyebrow">404</p>
+    <h1 class="hero__h1">
       That page isn't here.<br>
       <em>The rest of the site is.</em>
     </h1>
-    <p class="hero__sub reveal">
+    <p class="hero__sub">
       The link may be old or mistyped. Everything on the site is one click from here.
     </p>
-    <div class="hero__actions reveal">
-      <a class="btn btn--primary btn--lg" href="index.html">Back to the home page</a>
-      <a class="btn btn--quiet btn--lg" href="how-it-works.html">How it works →</a>
+    <div class="hero__actions">
+      <a class="btn btn--primary btn--lg" href="/">Back to the home page</a>
+      <a class="btn btn--quiet btn--lg" href="/how-it-works.html">How it works →</a>
     </div>
   </div>
 </section>
@@ -77,7 +81,7 @@
 <footer class="foot">
   <div class="wrap foot__inner">
     <div class="foot__brand">
-      <a class="brand brand--foot" href="index.html">
+      <a class="brand brand--foot" href="/">
         <svg class="brand__mark" viewBox="0 0 32 32" aria-hidden="true">
           <circle cx="16" cy="16" r="15" fill="none" stroke="currentColor" stroke-width="1.5" opacity=".35"/>
           <path d="M9 8 H23 V17 L16 24 L9 17 Z" fill="currentColor"/>
@@ -89,23 +93,20 @@
     </div>
     <nav class="foot__links" aria-label="Footer">
       <div>
-        <h5>Product</h5>
-        <a href="industries.html">Industries</a>
-        <a href="how-it-works.html">How it works</a>
-        <a href="leads.html">The leads</a>
-        <a href="compare.html">Compare</a>
+        <p class="foot__h">Product</p>
+        <a href="/industries.html">Industries</a>
+        <a href="/how-it-works.html">How it works</a>
+        <a href="/leads.html">The leads</a>
+        <a href="/compare.html">Compare</a>
+        <a href="/faq.html">FAQ</a>
       </div>
       <div>
-        <h5>Company</h5>
-        <a href="faq.html">FAQ</a>
-        <a href="contact.html">Contact</a>
+        <p class="foot__h">Company</p>
+        <a href="/contact.html">Contact</a>
         <a href="https://calendly.com/zatulovebrian/call" target="_blank" rel="noopener">Book a call</a>
-      </div>
-      <div>
-        <h5>Legal</h5>
-        <a href="privacy.html">Privacy</a>
-        <a href="terms.html">Terms</a>
-        <a href="refunds.html">Refunds</a>
+        <a href="/privacy.html">Privacy</a>
+        <a href="/terms.html">Terms</a>
+        <a href="/refunds.html">Refunds</a>
       </div>
     </nav>
   </div>
@@ -115,6 +116,6 @@
   </div>
 </footer>
 
-<script src="script.js" defer></script>
+<script src="/script.js" defer></script>
 </body>
 </html>

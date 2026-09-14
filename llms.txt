@@ -1,0 +1,29 @@
+# Homefield
+
+> Homefield — exclusive homeowner leads for home services, insurance, and real estate. A pay-per-qualified-lead marketing service that emails homeowners in a client's territory, under the client's approved business identity, at a modeled moment, and delivers the homeowners who reply.
+
+Homefield serves businesses that sell to homeowners: home services companies (roofing, HVAC, plumbing, solar, remodeling), home insurance agencies, real estate agents and real estate investors. The moments it times to: a modeled home-policy renewal window, a roof or system aging into replacement range, a just-listed or just-sold home nearby, or ownership tenure and equity. Replies asking for a quote, estimate, valuation or offer are delivered as qualified leads with a property record and the full thread. One business per industry per ZIP; no contract; billed weekly per qualified lead.
+
+Homefield is a service of Homefield Growth LLC (14320 Ventura Blvd #1137, Los Angeles, CA 91423; brian@homefieldemail.com). Site last reviewed 2026-09-14.
+
+Key facts: 100–500 ZIP codes locked per business; territories under about 100 populated ZIPs are not a fit; about 21 days from onboarding call to first qualified lead; licensed database of 275M+ property and ownership records from public records and licensed data providers, scrubbed against suppression lists before sending; not billed: bounces, auto-replies, unsubscribes, out-of-territory, duplicates, wrong contacts, hostile replies, declines; per-lead rates are set by industry and quoted in writing on a call, step down above 50 and above 299 qualified leads per calendar month; one-time onboarding fee; weekly invoices each Friday in arrears, itemized with every reply thread; 7-day lead dispute window; 30-day billing-error window; cancel with 30 days' notice.
+
+Insurance: the data and timing are built around the house. Nobody outside the carrier knows a renewal date; Homefield models the renewal month from the public-record purchase/closing date (home policies typically renew on the closing anniversary) and sends 30–45 days before. It holds no auto-policy, vehicle or life-specific data; agencies that write home and auto use the home renewal as the bundle moment, and life-focused or multi-line agencies use the new-mortgage moment and the renewal for mortgage-protection and coverage-review conversations in a sequence they approve.
+
+Home services: outreach is timed to modeled system age from build year, permit history and property records — a roof past year 18, a furnace or condenser past year 12 — with seasonal peaks layered on; after major hail or wind, an additional wave offers roofing inspections (and coverage reviews for insurance agencies) within state rules.
+
+## Pages
+
+- [Home](https://homefieldemail.com/): what Homefield does and who it is for
+- [Industries](https://homefieldemail.com/industries.html): home services, home insurance agencies, real estate agents, real estate investors — the timing signal for each
+- [How it works](https://homefieldemail.com/how-it-works.html): data and targeting filters, the three-email sequence, reply grading, day 0 to day 21
+- [The leads](https://homefieldemail.com/leads.html): definition of a qualified lead, the delivered record, what is never billed
+- [Compare](https://homefieldemail.com/compare.html): Homefield vs direct mail vs shared lead vendors, and when Homefield is not the right fit
+- [FAQ](https://homefieldemail.com/faq.html): contracts, lead quality, territory, compliance, billing
+- [Book a call](https://homefieldemail.com/contact.html): 15-minute call; territory availability checked live
+
+## Optional
+
+- [Privacy Policy](https://homefieldemail.com/privacy.html)
+- [Terms of Service](https://homefieldemail.com/terms.html)
+- [Refund Policy](https://homefieldemail.com/refunds.html)

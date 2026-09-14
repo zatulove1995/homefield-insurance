@@ -1,0 +1,16 @@
+# homefieldemail.com crawl policy — last reviewed 2026-09-14
+# Every public page is open to every crawler, including AI search and answer
+# engines: OAI-SearchBot, ChatGPT-User, Claude-SearchBot, Claude-User,
+# PerplexityBot, Perplexity-User, bingbot, Googlebot (tokens verified 2026-09-14
+# against developers.openai.com/api/docs/bots · support.claude.com/en/articles/8896518 ·
+# docs.perplexity.ai/guides/bots · developers.google.com/search/docs/crawling-indexing/google-common-crawlers).
+# They inherit the wildcard group below ON PURPOSE: a per-bot User-agent group
+# replaces the wildcard rules for that bot, so any future Disallow under * would
+# not reach it. Hidden and legal pages are excluded from indexes with
+# <meta name="robots" content="noindex">, deliberately NOT with Disallow:
+# a Disallow would stop crawlers from ever seeing that tag.
+
+User-agent: *
+Allow: /
+
+Sitemap: https://homefieldemail.com/sitemap.xml
