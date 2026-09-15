@@ -4,7 +4,7 @@
 
 Homefield serves businesses that sell to homeowners: home services companies (roofing, HVAC, plumbing, solar, remodeling), home insurance agencies, real estate agents and real estate investors. The moments it times to: a modeled home-policy renewal window, a roof or system aging into replacement range, a just-listed or just-sold home nearby, or ownership tenure and equity. Replies asking for a quote, estimate, valuation or offer are delivered as qualified leads with a property record and the full thread. One business per industry per ZIP; no contract; billed weekly per qualified lead.
 
-Homefield is a service of Homefield Growth LLC (14320 Ventura Blvd #1137, Los Angeles, CA 91423; brian@homefieldemail.com). Site last reviewed 2026-09-14.
+Homefield is a service of Homefield Growth LLC (14320 Ventura Blvd #1137, Los Angeles, CA 91423; brian@homefieldemail.com). Site last reviewed 2026-09-15.
 
 Key facts: 100–500 ZIP codes locked per business; territories under about 100 populated ZIPs are not a fit; about 21 days from onboarding call to first qualified lead; licensed database of 275M+ property and ownership records from public records and licensed data providers, scrubbed against suppression lists before sending; not billed: bounces, auto-replies, unsubscribes, out-of-territory, duplicates, wrong contacts, hostile replies, declines; per-lead rates are set by industry and quoted in writing on a call, step down above 50 and above 299 qualified leads per calendar month; one-time onboarding fee; weekly invoices each Friday in arrears, itemized with every reply thread; 7-day lead dispute window; 30-day billing-error window; cancel with 30 days' notice.
 
@@ -21,6 +21,13 @@ Home services: outreach is timed to modeled system age from build year, permit h
 - [Compare](https://homefieldemail.com/compare.html): Homefield vs direct mail vs shared lead vendors, and when Homefield is not the right fit
 - [FAQ](https://homefieldemail.com/faq.html): contracts, lead quality, territory, compliance, billing
 - [Book a call](https://homefieldemail.com/contact.html): 15-minute call; territory availability checked live
+
+## Insurance leads
+
+- [Insurance leads](https://homefieldemail.com/insurance-leads.html): the hub for P&C agents — what counts as an insurance lead, which lines and where each lives, who it is for
+- [Home insurance leads](https://homefieldemail.com/home-insurance-leads.html): renewal-timed homeowner leads for home insurance agencies; the modeled renewal window explained
+- [Home and auto insurance leads](https://homefieldemail.com/home-and-auto-insurance-leads.html): bundle-ready homeowner leads for agencies that write home and auto; no auto data, stated plainly
+- [What insurance leads cost](https://homefieldemail.com/insurance-leads-cost.html): published 2026 market price ranges with sources, cost per acquired policy, how Homefield bills
 
 ## Optional
 

@@ -8,10 +8,14 @@ insurance-only version is tagged `insurance-only-final`.
 
 ## Pages
 - Core: `index` · `industries` · `how-it-works` · `leads` · `compare` · `faq` · `contact`
-- Leads by industry (SEO landing pages, Sept 2026): `insurance-leads` (hub) · `home-insurance-leads` ·
-  `home-and-auto-insurance-leads` · `mortgage-protection-leads` · `roofing-leads` · `hvac-leads`
-- Compare: `insurance-leads-cost` · `everquote-alternatives` · `homefield-vs-everquote` ·
-  `homefield-vs-quotewizard` · `everquote-vs-quotewizard`
+- Insurance leads (SEO landing pages, shipped Sept 2026): `insurance-leads` (hub) · `home-insurance-leads` ·
+  `home-and-auto-insurance-leads` · `insurance-leads-cost`
+- Planned next (specs in the build brief, not yet built): `mortgage-protection-leads` · `roofing-leads` ·
+  `hvac-leads` · `everquote-alternatives` · `homefield-vs-everquote` · `homefield-vs-quotewizard` ·
+  `everquote-vs-quotewizard`. When they land: add them to `sitemap.xml`, `llms.txt` and the footer
+  (`index.html` then `tools/sync_chrome.py`), and restore the cross-links removed for this release
+  (industries home-services block, how-it-works storm note, faq trade answer, compare vendor-by-vendor
+  line, and the pillar's lines card / compare row / FAQ pointers).
 - Hidden / noindex: `pricing` (unlinked on purpose), `privacy`, `terms`, `refunds`, `404`
 
 Shared: `styles.css` (cache key `?v=nb5`), `script.js` (nav, mobile menu, reveal, current-page highlight,
