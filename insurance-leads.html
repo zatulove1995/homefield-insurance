@@ -124,8 +124,8 @@
    "author": {
     "@id": "https://homefieldemail.com/#founder"
    },
-   "datePublished": "2026-09-14T00:00:00-07:00",
-   "dateModified": "2026-09-14T00:00:00-07:00",
+   "datePublished": "2026-09-14T19:04:53-07:00",
+   "dateModified": "2026-09-15T00:00:00-07:00",
    "inLanguage": "en-US",
    "primaryImageOfPage": {
     "@type": "ImageObject",
@@ -158,10 +158,10 @@
   {
    "@type": "Service",
    "@id": "https://homefieldemail.com/insurance-leads.html#service",
-   "name": "Homefield insurance leads",
+   "name": "Homefield exclusive insurance leads for agents",
    "category": "Insurance",
    "serviceType": "Pay-per-qualified-lead homeowner marketing service for insurance agencies",
-   "description": "Renewal-timed email to homeowners in a locked territory under the agency's approved identity; homeowners who reply asking for a quote or a coverage review are delivered as qualified leads. One agency per ZIP.",
+   "description": "Homefield emails homeowners in an insurance agency's locked ZIP codes, under the agency's approved identity, 30–45 days before the modeled home-policy renewal, and delivers the homeowners who reply asking for a quote as qualified leads with the full reply thread. One agency per ZIP; 100–500 ZIPs per agency; about 21 days to first lead; billed weekly per qualified lead; no contract.",
    "provider": {
     "@id": "https://homefieldemail.com/#organization"
    },
@@ -171,10 +171,16 @@
    },
    "audience": {
     "@type": "BusinessAudience",
-    "name": "Licensed home insurance agencies, independent and captive P&C agents, multi-line agencies"
+    "audienceType": "Independent, captive and multi-line property & casualty insurance agencies that write home insurance"
    },
    "termsOfService": "https://homefieldemail.com/terms.html",
-   "url": "https://homefieldemail.com/insurance-leads.html"
+   "url": "https://homefieldemail.com/insurance-leads.html",
+   "offers": {
+    "@type": "Offer",
+    "name": "Pay per qualified lead",
+    "description": "Rate set by industry and quoted in writing on a call; steps down above 50 and above 299 qualified leads per calendar month; one-time onboarding fee; no contract.",
+    "url": "https://homefieldemail.com/contact.html"
+   }
   },
   {
    "@type": "FAQPage",
@@ -261,10 +267,20 @@
 .il-fit__links a:hover{ color:var(--accent-ink); }
 
 /* one-paragraph sections (4, 6, 7) */
-.il-prose p:not([class]){ font-size:17px; line-height:1.72; color:var(--muted); margin-bottom:18px; }
-.il-prose p:not([class]) strong{ color:var(--ink); font-weight:600; }
-.il-prose p:not([class]) a{ font-weight:600; color:var(--accent); }
-.il-prose p:not([class]) a:hover{ color:var(--accent-ink); }
+.il-crumb{
+  display:flex; flex-wrap:wrap; align-items:center; gap:8px; margin-bottom:22px;
+  font-family:var(--mono); font-size:12px; letter-spacing:.04em; text-transform:uppercase;
+  color:var(--muted-dark);
+}
+.il-crumb a{ color:var(--muted-dark); }
+.il-crumb a:hover{ color:#fff; }
+.il-crumb [aria-current]{ color:#fff; }
+.il-crumb i{ font-style:normal; opacity:.5; }
+
+.il-prose > p:not([class]){ font-size:17px; line-height:1.72; color:var(--muted); margin-bottom:18px; }
+.il-prose > p:not([class]) strong{ color:var(--ink); font-weight:600; }
+.il-prose > p:not([class]) a{ font-weight:600; color:var(--accent); }
+.il-prose > p:not([class]) a:hover{ color:var(--accent-ink); }
 .il-prose .il-more{ font-size:15.5px; line-height:1.7; color:var(--muted); }
 .il-prose .il-more a{ font-weight:600; color:var(--accent); }
 .il-prose .il-more a:hover{ color:var(--accent-ink); }
@@ -345,6 +361,10 @@
 <section class="hero hero--page">
   <div class="hero__glow" aria-hidden="true"></div>
   <div class="wrap hero__inner">
+    <nav class="il-crumb" aria-label="Breadcrumb">
+      <a href="/">Home</a><i aria-hidden="true">›</i>
+      <span aria-current="page">Insurance leads</span>
+    </nav>
     <p class="eyebrow">Insurance leads</p>
     <h1 class="hero__h1">
       Insurance leads that are actually exclusive.<br>
@@ -564,7 +584,7 @@
       <h2>Pay per qualified lead — the model in one paragraph</h2>
     </div>
     <p>
-      You pay per qualified lead and nothing else. The rate is set by industry and quoted to you in writing on the call, after your territory is checked live; it steps down when you pass 50 qualified leads in a calendar month and again when you pass 299. A one-time onboarding fee applies; there is no platform fee, no prepaid deposit and no contract — cancel with 30 days' notice. Invoices arrive weekly, every Friday, in arrears, itemized with every reply thread, with a 7-day dispute window on any lead and a 30-day window on billing errors.
+      You pay per qualified lead, plus a one-time onboarding fee — nothing else. The rate is set by industry and quoted to you in writing on the call, after your territory is checked live; it steps down when you pass 50 qualified leads in a calendar month and again when you pass 299. There is no platform fee, no prepaid deposit and no contract — cancel with 30 days' notice. Invoices arrive weekly, every Friday, in arrears, itemized with every reply thread, with a 7-day dispute window on any lead and a 30-day window on billing errors.
     </p>
     <p class="il-more"><a href="/home-insurance-leads.html#billing">The billing mechanics in full →</a> · <a href="/insurance-leads-cost.html">Published 2026 market prices, with sources →</a></p>
 

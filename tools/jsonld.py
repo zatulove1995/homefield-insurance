@@ -76,12 +76,13 @@ def service_parent():
         {"@type": "Offer", "name": "Real estate investors — tenure and equity outreach", "description": "Outreach timed to ownership tenure and equity for real estate investors.", "url": SITE + "industries.html#real-estate-investors"},
       ]}}
 def service_insurance():
-    return {"@type": "Service", "@id": SITE + "insurance-leads.html#service", "name": "Homefield insurance leads", "category": "Insurance",
+    return {"@type": "Service", "@id": SITE + "insurance-leads.html#service", "name": "Homefield exclusive insurance leads for agents", "category": "Insurance",
       "serviceType": "Pay-per-qualified-lead homeowner marketing service for insurance agencies",
-      "description": "Renewal-timed email to homeowners in a locked territory under the agency's approved identity; homeowners who reply asking for a quote or a coverage review are delivered as qualified leads. One agency per ZIP.",
+      "description": "Homefield emails homeowners in an insurance agency's locked ZIP codes, under the agency's approved identity, 30\u201345 days before the modeled home-policy renewal, and delivers the homeowners who reply asking for a quote as qualified leads with the full reply thread. One agency per ZIP; 100\u2013500 ZIPs per agency; about 21 days to first lead; billed weekly per qualified lead; no contract.",
       "provider": {"@id": ORG}, "areaServed": {"@type": "Country", "name": "United States"},
-      "audience": {"@type": "BusinessAudience", "name": "Licensed home insurance agencies, independent and captive P&C agents, multi-line agencies"},
-      "termsOfService": SITE + "terms.html", "url": SITE + "insurance-leads.html"}
+      "audience": {"@type": "BusinessAudience", "audienceType": "Independent, captive and multi-line property & casualty insurance agencies that write home insurance"},
+      "termsOfService": SITE + "terms.html", "url": SITE + "insurance-leads.html",
+      "offers": {"@type": "Offer", "name": "Pay per qualified lead", "description": "Rate set by industry and quoted in writing on a call; steps down above 50 and above 299 qualified leads per calendar month; one-time onboarding fee; no contract.", "url": SITE + "contact.html"}}
 
 for f in sorted(glob.glob('*.html')):
     if f in SKIP: continue
