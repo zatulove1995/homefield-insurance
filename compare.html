@@ -125,6 +125,7 @@
     "@id": "https://homefieldemail.com/#founder"
    },
    "datePublished": "2026-08-09T19:50:02-07:00",
+   "dateModified": "2026-09-14T00:00:00-07:00",
    "inLanguage": "en-US",
    "primaryImageOfPage": {
     "@type": "ImageObject",
@@ -167,7 +168,7 @@
   font-family:var(--mono); font-size:11.5px; font-weight:500; letter-spacing:.1em;
   text-transform:uppercase; color:var(--teal); margin-bottom:12px;
 }
-.cp-concede p{ font-size:16px; line-height:1.65; color:var(--muted); }
+.cp-concede p:not([class]){ font-size:16px; line-height:1.65; color:var(--muted); }
 .cp-concede p strong{ color:var(--ink); font-weight:600; }
 .cp-concede--after{ margin-top:44px; }
 
@@ -181,11 +182,19 @@
   text-transform:uppercase; color:var(--muted); margin-bottom:18px;
 }
 .cp-card h3{ font-size:20px; margin-bottom:10px; }
-.cp-card p{ font-size:15.5px; color:var(--muted); line-height:1.6; }
+.cp-card p:not([class]){ font-size:15.5px; color:var(--muted); line-height:1.6; }
 
-.cp-prose p{ font-size:16.5px; line-height:1.7; color:var(--muted); margin-bottom:18px; }
+.cp-prose p:not([class]){ font-size:16.5px; line-height:1.7; color:var(--muted); margin-bottom:18px; }
 .cp-prose p strong{ color:var(--ink); font-weight:600; }
 .cp-prose .ticks{ margin:26px 0; }
+
+/* vendor deep-dive: the cross-link paragraph after the bullets */
+.cp-vendors .grid-2__text p:not([class]){ margin-top:26px; font-size:15.5px; line-height:1.65; color:var(--muted); }
+
+/* under the dark comparison table: "Last reviewed" + trademark line, readable on --ink */
+.cp-tablefoot{ max-width:760px; }
+.cp-tablefoot .fineprint{ color:var(--muted-dark); margin-top:28px; }
+.cp-tablefoot .fineprint+.fineprint{ margin-top:10px; }
 
 @media (max-width:960px){
   .cp-cards{ grid-template-columns:1fr; }
@@ -245,8 +254,11 @@
       <em>three ways.</em>
     </h1>
     <p class="hero__sub">
-      Direct mail, shared lead vendors, or Homefield. Here's the honest math on all three —
-      including where the other two are genuinely better, and when we'd tell you not to hire us.
+      Homefield is exclusive by ZIP and billed only per qualified reply. Compared with direct mail
+      (typical response under 1%, paid up front) and shared lead vendors such as EverQuote, Angi and
+      Zillow (one request sold to several buyers), that changes the cost per acquired customer, not
+      the speed: Homefield is not the fit when you need leads this afternoon, because first leads
+      take about 21 days.
     </p>
   </div>
 </section>
@@ -282,17 +294,17 @@
         <p class="cac__num">$180<span>–$400</span></p>
         <p class="cac__unit">per acquired customer</p>
         <ul class="cac__list">
-          <li>Same lead sold to 4–8 competitors at once — EverQuote &amp; QuoteWizard, Angi &amp; Thumbtack, Zillow, skip-traced lists &amp; wholesalers</li>
+          <li>Same lead sold to several buyers at once — the insurance marketplaces we checked publish maximums of three (EverQuote) and four (QuoteWizard) agents per lead, as of September 2026; Angi &amp; Thumbtack, Zillow and resold absentee-owner lists work the same way</li>
           <li>You're racing the dial, not selling</li>
           <li>Form-fill intent, not a real reply</li>
-          <li>Monthly minimums and platform fees</li>
+          <li>Prepaid deposit or spend commitment at many vendors</li>
         </ul>
       </article>
 
       <article class="cac__card cac__card--win">
         <p class="cac__label">Homefield</p>
-        <p class="cac__num">Under<span> $200</span></p>
-        <p class="cac__unit">per acquired customer</p>
+        <p class="cac__num">4–5×<span> rate</span></p>
+        <p class="cac__unit">per acquired customer, at reported close rates</p>
         <ul class="cac__list">
           <li>Per-lead rate, set by industry — illustrative cost assumes the 20–25% close rates clients report</li>
           <li>Yours alone — locked by ZIP code</li>
@@ -304,9 +316,11 @@
     </div>
 
     <p class="fineprint">
-      Direct mail and shared-lead ranges reflect commonly cited industry figures for local home services,
-      home insurance, and real estate marketing.
-      Homefield's figure reflects industry-set per-lead rates at the close rates our businesses report — your results depend on your follow-up.
+      Direct-mail and shared-lead figures are illustrative estimates for local home services, home insurance
+      and real estate marketing, not vendor-published prices; vendor-published prices and buyer caps, with
+      sources, are on <a class="link" href="/insurance-leads-cost.html">what insurance leads cost</a>.
+      Homefield's figure is the arithmetic, not a price: roughly 4–5× your industry's per-lead rate at the
+      20–25% close rates participating businesses have reported; your results depend on your follow-up.
     </p>
   </div>
 </section>
@@ -321,6 +335,7 @@
 
     <div class="tablewrap">
       <table class="cmp">
+        <caption>Homefield vs direct mail vs shared lead vendors — as of September 2026</caption>
         <thead>
           <tr>
             <th scope="col"><span class="visually-hidden">Metric</span></th>
@@ -334,7 +349,7 @@
             <th scope="row">Cost per acquisition</th>
             <td>$250–$750</td>
             <td>$180–$400</td>
-            <td class="cmp__win">Under $200</td>
+            <td class="cmp__win">≈4–5× per-lead rate</td>
           </tr>
           <tr>
             <th scope="row">Time to first lead</th>
@@ -345,7 +360,7 @@
           <tr>
             <th scope="row">Exclusivity</th>
             <td>Anyone can mail the same street</td>
-            <td>Sold to 4–8 competitors</td>
+            <td>Sold to multiple buyers (vendor-published maximums 3–4 for the insurance marketplaces we checked)</td>
             <td class="cmp__win">Yours alone, ZIP-locked</td>
           </tr>
           <tr>
@@ -364,22 +379,26 @@
             <th scope="row">Targeting control</th>
             <td>Geographic, broad</td>
             <td>Whatever they route you</td>
-            <td class="cmp__win">ZIP, value, timing signal, equity, income</td>
+            <td class="cmp__win">ZIP, value, timing signal, equity, household profile</td>
           </tr>
           <tr>
             <th scope="row">Commitment</th>
             <td>Per-drop minimums</td>
-            <td>Monthly spend minimums</td>
+            <td>Prepaid deposit or spend commitment at many vendors</td>
             <td class="cmp__win">None after onboarding</td>
           </tr>
           <tr>
             <th scope="row">Wasted spend</th>
             <td>Every non-responder</td>
-            <td>Every lead the other 7 buyers win</td>
+            <td>Every lead another buyer wins</td>
             <td class="cmp__win">You pay per qualified reply only</td>
           </tr>
         </tbody>
       </table>
+    </div>
+    <div class="cp-tablefoot">
+      <p class="fineprint">Last reviewed: September 2026.</p>
+      <p class="fineprint">Company and product names on this page are trademarks of their owners. Homefield is not affiliated with or endorsed by any of them. Vendor facts are from the vendors' own public pages, or the named third-party source, as of September 2026; verify before relying on them.</p>
     </div>
   </div>
 </section>
@@ -389,7 +408,7 @@
   <div class="wrap grid-2">
     <div class="grid-2__text">
       <p class="eyebrow eyebrow--dark">Deep dive</p>
-      <h2>Against direct mail</h2>
+      <h2>How does Homefield compare with direct mail?</h2>
       <p class="lede">
         The economics of mail are simple and brutal: you pay full price for every homeowner
         who throws the postcard away, and more than 99% of them do. If you're an investor
@@ -416,22 +435,24 @@
 </section>
 
 <!-- ── AGAINST SHARED LEAD VENDORS ───────────────────── -->
-<section class="section">
+<section class="section cp-vendors">
   <div class="wrap grid-2 grid-2--flip">
     <div class="grid-2__text">
       <p class="eyebrow eyebrow--dark">Deep dive</p>
-      <h2>Against shared lead vendors</h2>
+      <h2>How does Homefield compare with shared lead vendors?</h2>
       <p class="lede">
         EverQuote and QuoteWizard for insurance, Angi and Thumbtack for home services, Zillow for
-        agents, skip-traced lists and wholesalers for investors — the model is the same everywhere:
-        one form fill or one name on a list, sold to 4–8 businesses at once, and the clock starts.
+        agents, resold absentee-owner lists and wholesalers for investors — the model is the same
+        everywhere: one form fill or one name on a list, sold to several businesses at once, and the
+        clock starts.
       </p>
       <ul class="ticks">
-        <li><strong>The 4–8 buyer race.</strong> The lead isn't yours — it's a head start you share with up to seven competitors who bought the exact same record.</li>
-        <li><strong>Speed-to-dial is the whole game.</strong> Industry practice is to call within minutes or lose. You're not selling; you're winning a reflex contest.</li>
+        <li><strong>The multi-buyer race.</strong> The lead isn't yours — it's a head start you share with the other agencies that bought the same record: EverQuote's FAQ says up to three, QuoteWizard's up to four (their own pages, as of September 2026).</li>
+        <li><strong>Speed-to-dial is the whole game.</strong> In a 2015 article for agents, EverQuote tells them to call within one minute; SmartFinancial says the first agent to make contact often has the strongest opportunity. You're not selling; you're winning a reflex contest.</li>
         <li><strong>Form-fill intent is thin.</strong> Someone clicked an ad and typed their ZIP to see a number. That's curiosity, not a request. A written reply asking what you'd charge is a request.</li>
-        <li><strong>Minimums and platform fees.</strong> You commit to monthly spend before you've seen a single lead's quality. We bill per qualified reply, nothing else.</li>
+        <li><strong>Prepaid deposits.</strong> Many marketplaces fund an account before the first lead arrives — MediaAlpha's minimum deposit is $250 and Datalot pre-pays by card, per their own pages as of September 2026 — so you're paying before you've seen a single lead's quality. We bill per qualified reply, weekly, in arrears.</li>
       </ul>
+      <p>Insurance agencies: the vendor facts and the 2026 price table, with sources, are on <a class="link" href="/insurance-leads-cost.html">what insurance leads cost</a>; the product itself is on <a class="link" href="/insurance-leads.html">insurance leads for agents</a>. Vendor by vendor: <a class="link" href="/everquote-alternatives.html">EverQuote alternatives</a>, <a class="link" href="/homefield-vs-everquote.html">Homefield vs EverQuote</a>, <a class="link" href="/homefield-vs-quotewizard.html">Homefield vs QuoteWizard</a>, <a class="link" href="/everquote-vs-quotewizard.html">EverQuote vs QuoteWizard</a>. Roofers and HVAC companies: <a class="link" href="/roofing-leads.html">roofing leads</a> · <a class="link" href="/hvac-leads.html">HVAC leads</a>.</p>
     </div>
     <div class="grid-2__visual">
       <div class="cp-concede">
@@ -453,25 +474,25 @@
       <h2>Against doing it yourself</h2>
       <p class="lede">
         Fair question, because every piece of this is buyable. Homeowner data, sending tools,
-        deliverability tooling — none of it is secret and none of it is exotic.
+        reply handling — none of it is secret and none of it is exotic.
       </p>
     </div>
     <p>
-      You could license homeowner records, stand up sending domains, subscribe to a deliverability
-      service, and write three emails. Plenty of businesses have tried. The parts that look
-      hard — the data, the tooling — aren't the parts that break.
+      You could license homeowner records, stand up sending domains, and write three emails.
+      Plenty of businesses have tried. The parts that look hard — the data, the tooling — aren't
+      the parts that break.
     </p>
     <p>What breaks is the operations layer underneath:</p>
     <ul class="ticks">
-      <li><strong>Deliverability management.</strong> Keeping dozens of inboxes and domains healthy is a daily job. Email deliverability is a specialized daily discipline — one misstep and your messages quietly stop reaching inboxes for weeks.</li>
+      <li><strong>Sending reputation.</strong> Dedicated domains have to be set up, authenticated and kept in good standing every day — one misstep and your messages quietly stop arriving for weeks.</li>
       <li><strong>Reply classification at volume.</strong> Every reply has to be read and graded — interest, auto-reply, bounce, opt-out, hostile — fast enough that real interest gets to someone who can answer it while it's warm. At a few hundred replies a month this becomes someone's actual job.</li>
-      <li><strong>The ramp-up runway.</strong> Fresh sending domains need 6–8 weeks of gradual, reputation-building volume before they can send at meaningful volume — one to two months of paying for tools and data with zero leads to show for it. (Our clients skip most of that runway: (Our clients skip most of that runway: our sending infrastructure is already established and in good standing, which is how first leads arrive around day 21 instead of month two.).)</li>
+      <li><strong>The setup runway.</strong> New sending infrastructure takes weeks to establish before it's useful — one to two months of paying for tools and data with nothing to show for it. Our infrastructure is already established and in good standing, which is how first leads arrive around day 21 instead of month two.</li>
     </ul>
     <div class="cp-concede cp-concede--after">
       <p class="cp-concede__label">When DIY is the right call</p>
       <p><strong>If you have an ops person who genuinely loves this work, consider it.</strong>
       The math can work — you'd keep our margin. What most businesses discover is that they don't
-      have that person, and an owner doing deliverability triage between appointments is the most
+      have that person, and an owner doing sending-reputation triage between appointments is the most
       expensive version of "free." But if you do have them, we're not going to pretend the
       arithmetic says otherwise.</p>
     </div>
@@ -535,6 +556,26 @@
   </div>
 </section>
 
+<!-- ── SOURCES + AUTHOR ──────────────────────────────── -->
+<section class="section section--tight">
+  <div class="wrap wrap--narrow">
+    <div class="sources">
+      <p>Sources</p>
+      <ol>
+        <li>EverQuote for Agents FAQ — shared leads go to a maximum of 3 agents: <a href="https://go.everquote.com/pro/faq" rel="noopener nofollow" target="_blank">go.everquote.com/pro/faq</a> (accessed 2026-09-14)</li>
+        <li>QuoteWizard — Insurance leads, sold to a maximum of four agents: <a href="https://agents.quotewizard.com/Insurance-leads/" rel="noopener nofollow" target="_blank">agents.quotewizard.com/Insurance-leads/</a> (accessed 2026-09-14)</li>
+        <li>EverQuote — Converting leads: contact speed (2015-08-21): <a href="https://www.everquote.com/blog/car-insurance/agents/converting-leads-contact-speed/" rel="noopener nofollow" target="_blank">everquote.com/blog/car-insurance/agents/converting-leads-contact-speed/</a> (accessed 2026-09-14)</li>
+        <li>SmartFinancial — Questions to ask before buying insurance leads: <a href="https://agents.smartfinancial.com/resource/questions-buying-insurance-leads" rel="noopener nofollow" target="_blank">agents.smartfinancial.com/resource/questions-buying-insurance-leads</a> (accessed 2026-09-14)</li>
+        <li>MediaAlpha for Agents FAQ — $250 minimum deposit: <a href="https://mediaalpha.com/agents-faq/" rel="noopener nofollow" target="_blank">mediaalpha.com/agents-faq/</a> (accessed 2026-09-14)</li>
+        <li>Datalot master agreement — pre-payment by card: <a href="http://app.datalot.com/legal" rel="noopener nofollow" target="_blank">app.datalot.com/legal</a> (accessed 2026-09-14)</li>
+      </ol>
+    </div>
+    <aside class="byline" aria-label="About the author">
+      <p class="byline__who"><strong>Written by Brian Zatulove</strong>, founder of Homefield. Previously co-founded Emotive, an SMS-marketing software company, and grew it from $0 to about $30M in revenue with about $70M in venture funding; Forbes 30 Under 30, 2021.</p>
+      <p class="byline__date">Last reviewed: September 2026 · <a href="mailto:brian@homefieldemail.com">brian@homefieldemail.com</a></p>
+    </aside>
+  </div>
+</section>
 
 <section class="section section--cta">
   <div class="wrap">

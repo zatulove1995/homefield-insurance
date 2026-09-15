@@ -188,22 +188,24 @@
 .ld-gallery .reply{ margin-bottom:0; display:flex; flex-direction:column; }
 .ld-gallery .reply__body{ flex:1; font-size:15.5px; }
 .ld-gallery .reply__foot{ margin-top:auto; }
+.ld-gallery__note{ margin-top:22px; font-size:14px; color:var(--muted-dark); }
+.ld-gallery__note a{ color:#fff; text-decoration:underline; }
 
 /* targeting grid used standalone (no steps above it) */
 .ld-flush{ margin-top:0; padding-top:0; border-top:0; }
 
-/* quality-guarantee card */
-.ld-guarantee{
+/* quality-commitment card */
+.ld-commit{
   background:var(--ink); color:#fff; border-radius:var(--r-lg);
   padding:30px 28px 26px; box-shadow:var(--shadow-lg);
 }
-.ld-guarantee__tag{
+.ld-commit__tag{
   font-family:var(--mono); font-size:11.5px; letter-spacing:.1em; text-transform:uppercase;
   color:#8FA8FF; margin-bottom:16px;
 }
-.ld-guarantee p{ font-size:16px; line-height:1.65; color:rgba(255,255,255,.82); }
-.ld-guarantee p + p{ margin-top:14px; }
-.ld-guarantee__foot{
+.ld-commit p{ font-size:16px; line-height:1.65; color:rgba(255,255,255,.82); }
+.ld-commit p + p{ margin-top:14px; }
+.ld-commit__foot{
   margin-top:20px; padding-top:18px; border-top:1px solid var(--line-dark);
   font-size:13.5px; color:var(--muted-dark);
 }
@@ -270,9 +272,11 @@
       <em>A sentence they typed themselves.</em>
     </h1>
     <p class="hero__sub">
-      A Homefield lead is a homeowner who read a personal email that landed at the
-      right moment — the renewal, the aging roof, the equity — and wrote back.
-      Here's exactly what counts, what one looks like, and where it lands.
+      A Homefield qualified lead is a homeowner in your territory who replies to the
+      outreach expressing interest — asking for a quote, an estimate, a valuation or an
+      offer, asking what you'd charge, or asking to be called. Each lead arrives with
+      name, email, address, estimated home value, timing signal, supplemental phone
+      where available, and the full reply thread.
     </p>
   </div>
 </section>
@@ -327,15 +331,16 @@
   <div class="wrap">
     <div class="sechead sechead--center sechead--onDark">
       <p class="eyebrow">The reply gallery</p>
-      <h2>What lands in your inbox</h2>
+      <h2>What do homeowners actually write back?</h2>
       <p class="lede">
         Replies read like conversations because that's what they are — the homeowner
         is corresponding with your business — we run the sending and sorting on your behalf, with every word approved by you.
       </p>
     </div>
 
-    <!-- SAMPLE CONTENT — illustrative replies; replace with real, permissioned reply screenshots before launch -->
+    <!-- SAMPLE CONTENT — illustrative reply, not a real lead -->
     <div class="ld-gallery">
+      <!-- SAMPLE CONTENT — illustrative reply, not a real lead -->
       <div class="reply">
         <div class="reply__bar">
           <span class="dot"></span><span class="dot"></span><span class="dot"></span>
@@ -358,6 +363,7 @@
         </div>
       </div>
 
+      <!-- SAMPLE CONTENT — illustrative reply, not a real lead -->
       <div class="reply">
         <div class="reply__bar">
           <span class="dot"></span><span class="dot"></span><span class="dot"></span>
@@ -381,6 +387,7 @@
         </div>
       </div>
 
+      <!-- SAMPLE CONTENT — illustrative reply, not a real lead -->
       <div class="reply">
         <div class="reply__bar">
           <span class="dot"></span><span class="dot"></span><span class="dot"></span>
@@ -403,6 +410,7 @@
         </div>
       </div>
 
+      <!-- SAMPLE CONTENT — illustrative reply, not a real lead -->
       <div class="reply">
         <div class="reply__bar">
           <span class="dot"></span><span class="dot"></span><span class="dot"></span>
@@ -425,6 +433,7 @@
         </div>
       </div>
 
+      <!-- SAMPLE CONTENT — illustrative reply, not a real lead -->
       <div class="reply">
         <div class="reply__bar">
           <span class="dot"></span><span class="dot"></span><span class="dot"></span>
@@ -447,6 +456,7 @@
         </div>
       </div>
 
+      <!-- SAMPLE CONTENT — illustrative reply, not a real lead -->
       <div class="reply">
         <div class="reply__bar">
           <span class="dot"></span><span class="dot"></span><span class="dot"></span>
@@ -469,6 +479,7 @@
         </div>
       </div>
     </div>
+    <p class="ld-gallery__note">Insurance agency? The two renewal replies above are the shape of a <a class="link" href="/home-insurance-leads.html">home insurance lead</a>.</p>
   </div>
 </section>
 
@@ -491,11 +502,12 @@
       </ul>
     </div>
     <div class="grid-2__visual">
+      <!-- SAMPLE CONTENT — illustrative reply, not a real lead -->
       <div class="record">
-        <p class="record__title">Lead record delivered</p>
+        <p class="record__title">Lead record delivered · sample</p>
         <dl class="record__grid">
           <div><dt>Name</dt><dd>First &amp; last</dd></div>
-          <div><dt>Email</dt><dd>Verified, replying</dd></div>
+          <div><dt>Email</dt><dd>Confirmed by their reply</dd></div>
           <div><dt>Address</dt><dd>Street, city, state, ZIP</dd></div>
           <div><dt>Home value</dt><dd>Estimated</dd></div>
           <div><dt>Timing signal</dt><dd>Renewal / roof age / equity</dd></div>
@@ -514,7 +526,7 @@
   <div class="wrap">
     <div class="sechead sechead--center">
       <p class="eyebrow eyebrow--dark">Delivery</p>
-      <h2>Where it lands</h2>
+      <h2>Where do leads get delivered?</h2>
       <p class="lede">Every qualified lead goes to all three at once, within minutes of the reply.</p>
     </div>
 
@@ -556,8 +568,8 @@
       </ul>
     </div>
     <div class="grid-2__visual">
-      <div class="ld-guarantee">
-        <p class="ld-guarantee__tag">The quality guarantee</p>
+      <div class="ld-commit">
+        <p class="ld-commit__tag">The quality commitment</p>
         <p>
           If lead quality drops, tell us and we re-cut the targeting — tighter home-value
           band, different timing window, different ZIP mix — until the replies are worth
@@ -567,7 +579,7 @@
           The incentive math does most of the enforcing: you're billed per qualified
           reply, so weak targeting costs Homefield before it costs you.
         </p>
-        <p class="ld-guarantee__foot">No make-goods to negotiate. The pricing model is the guarantee.</p>
+        <p class="ld-commit__foot">No make-goods to negotiate. The pricing model does the enforcing.</p>
       </div>
     </div>
   </div>

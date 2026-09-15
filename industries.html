@@ -165,7 +165,12 @@
   text-transform:uppercase; color:var(--accent); margin-bottom:12px;
 }
 .in-vendor h3{ font-size:16px; margin-bottom:8px; }
-.in-vendor p{ font-size:14px; color:var(--muted); line-height:1.55; }
+.in-vendor p:not([class]){ font-size:14px; color:var(--muted); line-height:1.55; }
+
+/* outbound links under the home-services and home-insurance tick lists */
+.in-links{ margin-top:22px; display:flex; flex-wrap:wrap; gap:10px 22px; font-size:15px; }
+.in-links a{ font-weight:600; color:var(--accent); }
+.in-links a:hover{ color:var(--accent-ink); }
 
 @media (max-width:900px){
   .in-strip{ grid-template-columns:repeat(2,1fr); }
@@ -229,9 +234,11 @@
       <em>One homeowner each.</em>
     </h1>
     <p class="hero__sub">
-      Every business here is buying the same thing — a homeowner's attention at the moment
-      they're ready. The moment is different for each of you. We find it in the data and
-      email right then.
+      Homefield serves four kinds of businesses: home services companies (roofing, HVAC, plumbing,
+      solar, remodeling), home insurance agencies, real estate agents and real estate investors.
+      Each reaches the same homeowner at a different moment — roof or system age, the modeled
+      policy-renewal window, just-listed and just-sold, or ownership tenure and equity — with one
+      business per industry per ZIP.
     </p>
   </div>
 </section>
@@ -252,8 +259,9 @@
       <ul class="ticks">
         <li><strong>Aging-system targeting</strong> — outreach goes to the homes whose roof, HVAC or major systems are in replacement range, not to everyone on the street</li>
         <li><strong>Estimate requests in their words</strong> — the homeowner writes back asking what a replacement runs, and the thread arrives with the record</li>
-        <li><strong>One business per industry per ZIP</strong> — your ZIPs are locked to you; a roofer, an agency, an agent and an investor can share a ZIP, <strong>One business per industry per ZIP</strong> — your ZIPs are locked to you; a roofer, an agency, an agent and an investor can share a ZIP, two roofers never can</li>
+        <li><strong>One business per industry per ZIP</strong> — your ZIPs are locked against other roofers; a roofer, an agency, an agent and an investor can share a ZIP, two roofers never can</li>
       </ul>
+      <p class="in-links"><a href="/roofing-leads.html">Roofing leads →</a> <a href="/hvac-leads.html">HVAC leads →</a></p>
     </div>
 
     <!-- SAMPLE CONTENT — illustrative reply, not a real lead -->
@@ -301,6 +309,7 @@
         <li><strong>They ask for the quote</strong> — the reply is a homeowner asking what you'd charge, not a form fill sold to whoever's dialing fastest</li>
         <li><strong>Your ZIPs locked from other agencies</strong> — one agency per ZIP, held while you're active, and every reply in your territory is yours</li>
       </ul>
+      <p class="in-links"><a href="/home-insurance-leads.html">Read the full home insurance leads page →</a> <a href="/home-and-auto-insurance-leads.html">Writing home and auto? →</a> <a href="/insurance-leads.html">Insurance leads overview →</a> <a href="/mortgage-protection-leads.html">Also writing life? →</a></p>
     </div>
 
     <!-- SAMPLE CONTENT — illustrative reply, not a real lead -->
@@ -406,12 +415,12 @@
         Long tenure, high equity, absentee owners, landlords who've had enough — these are the
         signals behind a homeowner likely to sell direct, off-market, as-is. We reach them by
         email before a sign goes in the yard, and what comes back is an offer conversation with
-        someone who raised their hand, not a skip-traced list every other investor in the county
+        someone who raised their hand, not a resold absentee-owner list every other investor in the county
         is mailing this month.
       </p>
       <ul class="ticks">
         <li><strong>Off-market sellers before they list</strong> — owner-occupancy, tenure and equity filters find the tired landlord and the long-held house before an agent does</li>
-        <li><strong>Offer conversations, not skip-traced lists</strong> — the homeowner replies asking what you'd pay and how fast you'd close</li>
+        <li><strong>Offer conversations, not resold lists</strong> — the homeowner replies asking what you'd pay and how fast you'd close</li>
         <li><strong>One investor per ZIP</strong> — an agent and an investor can both hold the same ZIP, because they're different industries; two investors never can</li>
       </ul>
     </div>
@@ -448,7 +457,7 @@
   <div class="wrap">
     <div class="sechead">
       <p class="eyebrow eyebrow--dark">Who you stop paying</p>
-      <h2>The same lead, sold four to eight times.</h2>
+      <h2>The same lead, sold several times over.</h2>
       <p class="lede">
         Every audience has a vendor that sells one homeowner to a room full of competitors.
         A Homefield lead replied to you, in your ZIP, and nobody else ever sees it.
@@ -459,12 +468,12 @@
       <div class="in-vendor">
         <p class="in-vendor__for">Home services</p>
         <h3>Angi &amp; Thumbtack</h3>
-        <p>One estimate request, sold to 4–8 contractors at once. You race the dial and pay whether or not you win the job.</p>
+        <p>One estimate request, sold to several contractors at once. You race the dial and pay whether or not you win the job.</p>
       </div>
       <div class="in-vendor">
         <p class="in-vendor__for">Home insurance</p>
         <h3>EverQuote &amp; QuoteWizard</h3>
-        <p>The quote request goes to 4–8 agencies. First to call gets a shot, everyone gets the bill.</p>
+        <p>The quote request goes to up to three or four agencies — EverQuote's FAQ says a maximum of three, QuoteWizard's a maximum of four (their own pages, as of September 2026). First to call gets a shot; everyone gets the bill.</p>
       </div>
       <div class="in-vendor">
         <p class="in-vendor__for">Real estate agents</p>
@@ -473,15 +482,24 @@
       </div>
       <div class="in-vendor">
         <p class="in-vendor__for">Real estate investors</p>
-        <h3>Skip-traced lists &amp; wholesalers</h3>
+        <h3>Resold absentee-owner lists &amp; wholesalers</h3>
         <p>Everyone's mailing the same absentee list. By the time your postcard lands, the owner has heard from six of you.</p>
       </div>
     </div>
 
     <p class="fineprint">
-      Shared-lead vendors are commonly cited at $180–$400 per acquired customer; Homefield businesses have reported under $200, though results vary.,
-      and the lead is exclusive by construction — one business per industry per ZIP.
+      Shared-lead cost per acquired customer is often estimated at $180–$400 — an illustrative estimate, not a vendor-published figure. Homefield's arithmetic is roughly 4–5× your per-lead rate at the 20–25% close rates participating businesses have reported, and the lead is exclusive by construction: one business per industry per ZIP. Vendor-published facts and prices, with sources, are on <a class="link" href="/insurance-leads-cost.html">what insurance leads cost</a>.
     </p>
+    <p class="fineprint">
+      Company and product names on this page are trademarks of their owners. Homefield is not affiliated with or endorsed by any of them. Vendor facts are from the vendors' own public pages, or the named third-party source, as of September 2026; verify before relying on them.
+    </p>
+    <div class="sources">
+      <p>Sources</p>
+      <ol>
+        <li>EverQuote for Agents FAQ — shared leads go to a maximum of 3 agents: <a href="https://go.everquote.com/pro/faq" rel="noopener nofollow" target="_blank">go.everquote.com/pro/faq</a> (accessed 2026-09-14)</li>
+        <li>QuoteWizard for Agents — insurance leads page, a maximum of four agents per lead: <a href="https://agents.quotewizard.com/Insurance-leads/" rel="noopener nofollow" target="_blank">agents.quotewizard.com/Insurance-leads/</a> (accessed 2026-09-14)</li>
+      </ol>
+    </div>
   </div>
 </section>
 
